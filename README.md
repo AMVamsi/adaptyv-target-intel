@@ -1,0 +1,1 @@
+# adaptyv-target-intel
