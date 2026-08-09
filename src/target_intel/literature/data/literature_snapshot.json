@@ -1,0 +1,4078 @@
+{
+  "_about": {
+    "source": "Real PubMed records retrieved via NCBI E-utilities.",
+    "built_at": "2026-08-05T13:44:28.649959+00:00",
+    "contains": "Real PMIDs, citation metadata, extracted entity spans and short (<=200 char) provenance excerpts. Full abstract text is NOT redistributed here; it is cached under .cache/ (gitignored) and re-fetchable with scripts/build_literature_snapshot.py.",
+    "excerpt_chars": 200
+  },
+  "targets": {
+    "P04626": {
+      "target_id": "comp-her2-human",
+      "name": "HER2 / ERBB2",
+      "gene_symbol": "ERBB2",
+      "uniprot_hint": "P04626",
+      "ncbi": {
+        "gene_id": "2064",
+        "symbol": "ERBB2",
+        "full_name": "erb-b2 receptor tyrosine kinase 2",
+        "organism": "Homo sapiens",
+        "taxon_id": "9606",
+        "chromosome": "17",
+        "map_location": "17q12",
+        "aliases": [
+          "CD340",
+          "HER-2",
+          "HER-2/neu",
+          "HER2",
+          "MLN 19",
+          "MLN-19",
+          "NEU",
+          "NGL",
+          "TKR1",
+          "VSCN2",
+          "c-ERB-2",
+          "c-ERB2",
+          "p185(erbB2)"
+        ],
+        "refseq_protein": "NP_004439.2",
+        "protein_name": "receptor tyrosine-protein kinase erbB-2 isoform a precursor",
+        "protein_length": 1255,
+        "gene_url": "https://www.ncbi.nlm.nih.gov/gene/2064",
+        "protein_url": "https://www.ncbi.nlm.nih.gov/protein/NP_004439.2"
+      },
+      "query": "(\"ERBB2\"[Title/Abstract] OR \"HER2\"[Title/Abstract] OR \"CD340\"[Title/Abstract] OR \"HER-2\"[Title/Abstract] OR \"HER-2/neu\"[Title/Abstract] OR \"MLN-19\"[Title/Abstract] OR \"TKR1\"[Title/Abstract] OR \"VSCN2\"[Title/Abstract] OR \"c-ERB-2\"[Title/Abstract] OR \"c-ERB2\"[Title/Abstract]) AND (antibody OR nanobody OR VHH OR scFv OR affibody OR \"binding protein\") AND (\"dissociation constant\" OR \"binding affinity\" OR \"surface plasmon resonance\" OR \"biolayer interferometry\") AND hasabstract",
+      "n_retrieved": 20,
+      "n_with_evidence": 19,
+      "records": [
+        {
+          "pmid": "42524378",
+          "title": "HLA class I-specific nucleolin peptides induce therapeutic T cells in triple-negative breast cancer patients.",
+          "journal": "Int J Biol Sci",
+          "year": "2026",
+          "citation": "PMID 42524378 (Int J Biol Sci, 2026)",
+          "excerpt": "a broadly applicable immunogenic peptide. Furthermore, the combination of NCL-specific T cells with atezolizumab enhanced anti-tumor activity, suggesting the potential benefit of combining NCL-targete",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "atezolizumab",
+              "start": 1579,
+              "end": 1591,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "atezolizumab",
+              "start": 1832,
+              "end": 1844,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42436722",
+          "title": "A designed fusion tag improves soluble expression of nanobody in E. coli.",
+          "journal": "Magn Reson Lett",
+          "year": "2026",
+          "citation": "PMID 42436722 (Magn Reson Lett, 2026)",
+          "excerpt": "A designed fusion tag improves soluble expression of nanobody in E. coli. Nanobodies are small, single-domain antibody fragments derived from camelid heavy-chain antibodies that offer high stability,",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 53,
+              "end": 61,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "Nanobodies",
+              "start": 74,
+              "end": 84,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 110,
+              "end": 118,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 162,
+              "end": 172,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 336,
+              "end": 346,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 348,
+              "end": 358,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 702,
+              "end": 712,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 813,
+              "end": 821,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 871,
+              "end": 879,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 1008,
+              "end": 1016,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 1035,
+              "end": 1043,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 1113,
+              "end": 1123,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 1411,
+              "end": 1421,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42425537",
+          "title": "A covalent peptide engager approach to equip immunotherapeutic monoclonal and pan IgG serum antibodies with new tumour-targeting function.",
+          "journal": "Br J Pharmacol",
+          "year": "2026",
+          "citation": "PMID 42425537 (Br J Pharmacol, 2026)",
+          "excerpt": "A covalent peptide engager approach to equip immunotherapeutic monoclonal and pan IgG serum antibodies with new tumour-targeting function. BACKGROUND AND PURPOSE: Site-specific antibody modification i",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 92,
+              "end": 102,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 177,
+              "end": 185,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 242,
+              "end": 250,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 468,
+              "end": 476,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 537,
+              "end": 545,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 746,
+              "end": 756,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1315,
+              "end": 1323,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1582,
+              "end": 1590,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 2045,
+              "end": 2055,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 2147,
+              "end": 2157,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42366202",
+          "title": "Searching for BBB permeable phytochemical inhibitors for targeting brain cancer associated HER2 protein through free energy calculations and pharmacokinetic analysis.",
+          "journal": "Sci Rep",
+          "year": "2026",
+          "citation": "PMID 42366202 (Sci Rep, 2026)",
+          "excerpt": "phenotype is closely associated with brain metastases. While systemic treatments include monoclonal antibodies and synthetic drugs, their efficacy is often hindered by unfavourable pharmacodynamics, p",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 315,
+              "end": 325,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42252776",
+          "title": "Affinity Enhancement in Discrete Multivalent MegaMolecules.",
+          "journal": "Chembiochem",
+          "year": "2026",
+          "citation": "PMID 42252776 (Chembiochem, 2026)",
+          "excerpt": "xhibited improvements in apparent binding affinities from nano- or micromolar range to picomolar or sub-picomolar range (31- to\u2009\u223c118,000-fold increase). Notably, a dendritic hexavalent megamolecule ac",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 187,
+              "end": 197,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "sub-picomolar",
+              "start": 564,
+              "end": 577,
+              "value_range_m": [
+                1e-13,
+                1e-12
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "sub-picomolar",
+              "start": 671,
+              "end": 684,
+              "value_range_m": [
+                1e-13,
+                1e-12
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41936024",
+          "title": "Tokenizing loops of antibodies.",
+          "journal": "MAbs",
+          "year": "2026",
+          "citation": "PMID 41936024 (MAbs, 2026)",
+          "excerpt": "Tokenizing loops of antibodies. The complementarity-determining regions (CDRs) of antibodies are loop structures that are key to their interactions with antigens and are of high importance to the desi",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 20,
+              "end": 30,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 82,
+              "end": 92,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 442,
+              "end": 450,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 802,
+              "end": 810,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1327,
+              "end": 1335,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1540,
+              "end": 1548,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1640,
+              "end": 1648,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1739,
+              "end": 1747,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1952,
+              "end": 1960,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 2050,
+              "end": 2058,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41912649",
+          "title": "Elucidating the relationship between affinity and potency in the performance of therapeutic IgE.",
+          "journal": "Sci Rep",
+          "year": "2026",
+          "citation": "PMID 41912649 (Sci Rep, 2026)",
+          "excerpt": "lucidating the relationship between affinity and potency in the performance of therapeutic IgE. IgE antibodies exert strong immunostimulatory effects and their anti-tumour effectiveness is currently b",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 101,
+              "end": 111,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 321,
+              "end": 329,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 757,
+              "end": 765,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 853,
+              "end": 861,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41900869",
+          "title": "Analytical Physicochemical and Functional Studies to Compare AryoTrust, a Follow-On Biologics, with the Originator Trastuzumab (Herceptin).",
+          "journal": "Pharmaceutics",
+          "year": "2026",
+          "citation": "PMID 41900869 (Pharmaceutics, 2026)",
+          "excerpt": "icochemical and Functional Studies to Compare AryoTrust, a Follow-On Biologics, with the Originator Trastuzumab (Herceptin). Background: Trastuzumab is a blockbuster monoclonal antibody that has revol",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "Trastuzumab",
+              "start": 115,
+              "end": 126,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "Trastuzumab",
+              "start": 152,
+              "end": 163,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 192,
+              "end": 200,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 342,
+              "end": 352,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 637,
+              "end": 648,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 2243,
+              "end": 2254,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41679917",
+          "title": "In\u00a0Vivo Studies of [161Tb]Tb-Trastuzumab Radiopharmaceutical Therapy in Human Epidermal Growth Factor Receptor 2-Expressing Breast Tumors Show High Tumor Uptake and Tumor Growth Suppression.",
+          "journal": "J Nucl Med",
+          "year": "2026",
+          "citation": "PMID 41679917 (J Nucl Med, 2026)",
+          "excerpt": "emical purity above 99%. The binding affinity of functionalized and native trastuzumab was 0.83 and 0.39 nM, respectively, with an immunoreactive fraction of 89%. SPECT/CT imaging demonstrated peak tu",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "Trastuzumab",
+              "start": 29,
+              "end": 40,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 447,
+              "end": 458,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 515,
+              "end": 526,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 531,
+              "end": 542,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "Trastuzumab",
+              "start": 590,
+              "end": 601,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 787,
+              "end": 798,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 863,
+              "end": 874,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1020,
+              "end": 1031,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1149,
+              "end": 1160,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1192,
+              "end": 1203,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1243,
+              "end": 1254,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1260,
+              "end": 1271,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1470,
+              "end": 1481,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1832,
+              "end": 1843,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1879,
+              "end": 1890,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 1983,
+              "end": 1994,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 2240,
+              "end": 2251,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 2339,
+              "end": 2350,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 2501,
+              "end": 2512,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "0.39 nM",
+              "start": 1495,
+              "end": 1502,
+              "value_range_m": [
+                3.9000000000000005e-10,
+                3.9000000000000005e-10
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41650542",
+          "title": "Antigen affinity chromatography for functional separation and efficient characterization of critical monoclonal antibody variants.",
+          "journal": "J Chromatogr A",
+          "year": "2026",
+          "citation": "PMID 41650542 (J Chromatogr A, 2026)",
+          "excerpt": "nity chromatography for functional separation and efficient characterization of critical monoclonal antibody variants. Monoclonal antibodies (mAbs) are prone to post-translational modifications during",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 112,
+              "end": 120,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 142,
+              "end": 152,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 615,
+              "end": 626,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41557947",
+          "title": "Ab-SELDON: Leveraging Diversity Data for an Efficient Automated Computational Pipeline for Antibody Design.",
+          "journal": "J Chem Inf Model",
+          "year": "2026",
+          "citation": "PMID 41557947 (J Chem Inf Model, 2026)",
+          "excerpt": "Ab-SELDON: Leveraging Diversity Data for an Efficient Automated Computational Pipeline for Antibody Design. The utilization of predictive tools has become increasingly prevalent in the development of",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Antibody",
+              "start": 91,
+              "end": 99,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 300,
+              "end": 308,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 369,
+              "end": 377,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 579,
+              "end": 587,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 641,
+              "end": 649,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 876,
+              "end": 884,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1062,
+              "end": 1070,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1096,
+              "end": 1104,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1547,
+              "end": 1555,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41365042",
+          "title": "Site-specific conjugated antibody-element tags for single-cell ICP-MS.",
+          "journal": "Talanta",
+          "year": "2026",
+          "citation": "PMID 41365042 (Talanta, 2026)",
+          "excerpt": "Site-specific conjugated antibody-element tags for single-cell ICP-MS. Inductively coupled plasma mass spectrometry (ICP-MS) has demonstrated high sensitivity, accuracy, and multi-element detection ca",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 25,
+              "end": 33,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 266,
+              "end": 274,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 338,
+              "end": 346,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 657,
+              "end": 667,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 741,
+              "end": 749,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1039,
+              "end": 1047,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1521,
+              "end": 1531,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41199503",
+          "title": "Paratope plasticity determines anti-HER2 (4B5) antibody specificity.",
+          "journal": "MAbs",
+          "year": "2025",
+          "citation": "PMID 41199503 (MAbs, 2025)",
+          "excerpt": "Paratope plasticity determines anti-HER2 (4B5) antibody specificity. The PATHWAY anti-HER2/neu (4B5) Rabbit Monoclonal Primary Antibody immunohistochemistry (IHC) assay is used to identify patients el",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 47,
+              "end": 55,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "Antibody",
+              "start": 127,
+              "end": 135,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 283,
+              "end": 291,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 595,
+              "end": 603,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1622,
+              "end": 1630,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41188605",
+          "title": "Theranostic application of radiolabeled HER2-targeting single-domain antibodies (RAD202) in preclinical setting.",
+          "journal": "Sci Rep",
+          "year": "2025",
+          "citation": "PMID 41188605 (Sci Rep, 2025)",
+          "excerpt": "Theranostic application of radiolabeled HER2-targeting single-domain antibodies (RAD202) in preclinical setting. HER2 is a well-established target for antibody-based drug delivery. Single-domain antib",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 69,
+              "end": 79,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 151,
+              "end": 159,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 195,
+              "end": 205,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 247,
+              "end": 257,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41108118",
+          "title": "Surface plasmon resonance microscopy reveals N-glycosylation driven modulation of affinity and avidity of ErbB receptors in whole single pancreatic cancer cells.",
+          "journal": "Glycobiology",
+          "year": "2025",
+          "citation": "PMID 41108118 (Glycobiology, 2025)",
+          "excerpt": "r avidity modes of binding interaction could be observed. For bivalent Cetuximab (anti-HER1) KDs of 151\u00a0nM and 4.6\u00a0nM were observed, for bivalent Herceptin (anti-HER2) KDs of 2\u00a0nM and 0.1\u00a0nM were obse",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 374,
+              "end": 384,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 772,
+              "end": 782,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "Cetuximab",
+              "start": 1107,
+              "end": 1116,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1719,
+              "end": 1729,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "151 nM",
+              "start": 1136,
+              "end": 1142,
+              "value_range_m": [
+                1.5100000000000002e-07,
+                1.5100000000000002e-07
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "4.6 nM",
+              "start": 1147,
+              "end": 1153,
+              "value_range_m": [
+                4.6e-09,
+                4.6e-09
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "2 nM",
+              "start": 1211,
+              "end": 1215,
+              "value_range_m": [
+                2e-09,
+                2e-09
+              ],
+              "qualified": false
+            },
+            {
+              "type": "affinity_value",
+              "text": "0.1 nM",
+              "start": 1220,
+              "end": 1226,
+              "value_range_m": [
+                1.0000000000000002e-10,
+                1.0000000000000002e-10
+              ],
+              "qualified": false
+            },
+            {
+              "type": "affinity_value",
+              "text": "13 nM",
+              "start": 1276,
+              "end": 1281,
+              "value_range_m": [
+                1.3e-08,
+                1.3e-08
+              ],
+              "qualified": false
+            },
+            {
+              "type": "affinity_value",
+              "text": "1.3 nM",
+              "start": 1286,
+              "end": 1292,
+              "value_range_m": [
+                1.3e-09,
+                1.3e-09
+              ],
+              "qualified": false
+            }
+          ]
+        },
+        {
+          "pmid": "41038820",
+          "title": "Dual membrane receptor degradation via folate receptor targeting chimera.",
+          "journal": "Nat Commun",
+          "year": "2025",
+          "citation": "PMID 41038820 (Nat Commun, 2025)",
+          "excerpt": "roof-of-concept studies reveal that EGFR and HER2 FolTAC-dual effectively counteracts resistance in Trastuzumab/Lapatinib-resistant HER2-positive breast cancer models, while PD-L1 and VISTA FolTAC-dua",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "Trastuzumab",
+              "start": 995,
+              "end": 1006,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1135,
+              "end": 1143,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41034517",
+          "title": "Peptide design through binding interface mimicry with PepMimic.",
+          "journal": "Nat Biomed Eng",
+          "year": "2026",
+          "citation": "PMID 41034517 (Nat Biomed Eng, 2026)",
+          "excerpt": "evelop an artificial intelligence algorithm, PepMimic, to transform a known receptor or an existing antibody of a target into a short peptide binder by mimicking the binding interfaces between targets",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 365,
+              "end": 373,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "40850443",
+          "title": "Albubody: an engineered scFv variant platform for site-specific drug conjugation and enhanced tumor efficacy.",
+          "journal": "J Control Release",
+          "year": "2025",
+          "citation": "PMID 40850443 (J Control Release, 2025)",
+          "excerpt": "Albubody: an engineered scFv variant platform for site-specific drug conjugation and enhanced tumor efficacy. Antibody-drug conjugates (ADCs) represent a promising approach for targeted cancer therapy",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 24,
+              "end": 28,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "Antibody",
+              "start": 110,
+              "end": 118,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 244,
+              "end": 248,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 374,
+              "end": 378,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 585,
+              "end": 596,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1270,
+              "end": 1274,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1294,
+              "end": 1298,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "40849046",
+          "title": "Proximity-based site-specific labeling of a native IgG Fab fragment by a fusion microbial transglutaminase-protein G variant.",
+          "journal": "N Biotechnol",
+          "year": "2025",
+          "citation": "PMID 40849046 (N Biotechnol, 2025)",
+          "excerpt": "erometry experiments confirmed that the modified Fab retained antigen-binding affinity (KD = 5.71\u202f\u00b1\u202f3.89\u202fnM) comparable to its native counterpart (4.72\u202f\u00b1\u202f3.19\u202fnM). Confocal microscopy analysis demonst",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 691,
+              "end": 699,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "trastuzumab",
+              "start": 726,
+              "end": 737,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1527,
+              "end": 1535,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "3.89 nM",
+              "start": 1032,
+              "end": 1039,
+              "value_range_m": [
+                3.8900000000000004e-09,
+                3.8900000000000004e-09
+              ],
+              "qualified": false
+            },
+            {
+              "type": "affinity_value",
+              "text": "3.19 nM",
+              "start": 1086,
+              "end": 1093,
+              "value_range_m": [
+                3.19e-09,
+                3.19e-09
+              ],
+              "qualified": false
+            }
+          ]
+        }
+      ]
+    },
+    "P00533": {
+      "target_id": "comp-egfr-human",
+      "name": "EGFR",
+      "gene_symbol": "EGFR",
+      "uniprot_hint": "P00533",
+      "ncbi": {
+        "gene_id": "1956",
+        "symbol": "EGFR",
+        "full_name": "epidermal growth factor receptor",
+        "organism": "Homo sapiens",
+        "taxon_id": "9606",
+        "chromosome": "7",
+        "map_location": "7p11.2",
+        "aliases": [
+          "ERBB",
+          "ERBB1",
+          "ERRP",
+          "HER1",
+          "NISBD2",
+          "NNCIS",
+          "PIG61",
+          "mENA"
+        ],
+        "refseq_protein": "NP_005219.2",
+        "protein_name": "epidermal growth factor receptor isoform a precursor",
+        "protein_length": 1210,
+        "gene_url": "https://www.ncbi.nlm.nih.gov/gene/1956",
+        "protein_url": "https://www.ncbi.nlm.nih.gov/protein/NP_005219.2"
+      },
+      "query": "(\"EGFR\"[Title/Abstract] OR \"ERBB\"[Title/Abstract] OR \"ERBB1\"[Title/Abstract] OR \"ERRP\"[Title/Abstract] OR \"HER1\"[Title/Abstract] OR \"NISBD2\"[Title/Abstract] OR \"NNCIS\"[Title/Abstract] OR \"PIG61\"[Title/Abstract] OR \"mENA\"[Title/Abstract]) AND (antibody OR nanobody OR VHH OR scFv OR affibody OR \"binding protein\") AND (\"dissociation constant\" OR \"binding affinity\" OR \"surface plasmon resonance\" OR \"biolayer interferometry\") AND hasabstract",
+      "n_retrieved": 20,
+      "n_with_evidence": 18,
+      "records": [
+        {
+          "pmid": "42327177",
+          "title": "ProtAff: Protein Binding Affinity Prediction via LoRA-Finetuned ESM-2.",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "citation": "PMID 42327177 (bioRxiv, 2026)",
+          "excerpt": "ign competition, a pipeline incorporating ProtAff for affinity ranking produced a design with K D = 0.132 nM (2 of 5 designs confirmed binding), a 2.8-fold improvement over the competition winner. On",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 1388,
+              "end": 1391,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "0.132 nM",
+              "start": 1242,
+              "end": 1250,
+              "value_range_m": [
+                1.32e-10,
+                1.32e-10
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42252776",
+          "title": "Affinity Enhancement in Discrete Multivalent MegaMolecules.",
+          "journal": "Chembiochem",
+          "year": "2026",
+          "citation": "PMID 42252776 (Chembiochem, 2026)",
+          "excerpt": "xhibited improvements in apparent binding affinities from nano- or micromolar range to picomolar or sub-picomolar range (31- to\u2009\u223c118,000-fold increase). Notably, a dendritic hexavalent megamolecule ac",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 187,
+              "end": 197,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "sub-picomolar",
+              "start": 564,
+              "end": 577,
+              "value_range_m": [
+                1e-13,
+                1e-12
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "sub-picomolar",
+              "start": 671,
+              "end": 684,
+              "value_range_m": [
+                1e-13,
+                1e-12
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42190582",
+          "title": "Activity of epidermal growth factor is directly affected by S100 proteins.",
+          "journal": "Cell Calcium",
+          "year": "2026",
+          "citation": "PMID 42190582 (Cell Calcium, 2026)",
+          "excerpt": "the presence of calcium with lowest estimates of the equilibrium dissociation constant ranging from 13 nM to 1.0 \u03bcM. Structural modelling indicates involvement of \u03b1-helix IV and \"hinge\" region of the",
+          "has_affinity": true,
+          "has_binder": false,
+          "entities": [
+            {
+              "type": "affinity_value",
+              "text": "13 nM",
+              "start": 1042,
+              "end": 1047,
+              "value_range_m": [
+                1.3e-08,
+                1.3e-08
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "1.0 \u03bcM",
+              "start": 1051,
+              "end": 1057,
+              "value_range_m": [
+                1e-06,
+                1e-06
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42145655",
+          "title": "Development of SDP0505: a first-in-class HER3\u00a0\u00d7\u00a0c-Met bispecific ADC, demonstrates potent antitumor activity in EGFR TKI-resistant NSCLC, CRC, and beyond.",
+          "journal": "Antib Ther",
+          "year": "2026",
+          "citation": "PMID 42145655 (Antib Ther, 2026)",
+          "excerpt": "and 95% of CRC cases. Consequently, SDP0505 was developed with optimal antigen-binding affinity and antibody format through comprehensive screening. In HER3/c-Met dual-positive cell lines, SDP0505 dem",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1511,
+              "end": 1519,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42144097",
+          "title": "Secreted PEBP4 promotes colorectal cancer progression via regulation of the TGF-\u03b2 signaling pathway.",
+          "journal": "Cancer Lett",
+          "year": "2026",
+          "citation": "PMID 42144097 (Cancer Lett, 2026)",
+          "excerpt": "he proliferation and migration of colon cancer cells, an event that was prevented by treatment with antibodies against PEBP4 or by mutating the N-glycosylation site (N169 to Q). Our studies indicated",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 719,
+              "end": 729,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42085373",
+          "title": "EGFR-targeted affibody-polyIC polyplex kills EGFR-overexpressing cancer cells without activating the EGFR.",
+          "journal": "PLoS One",
+          "year": "2026",
+          "citation": "PMID 42085373 (PLoS One, 2026)",
+          "excerpt": "binds tightly to full-length sEGFR with an average equilibrium dissociation constant, KD, value of 6.74\u2009nM. As expected the PPEA-polyplex does not activate the EGFR kinase, but kills tumor cells expr",
+          "has_affinity": true,
+          "has_binder": false,
+          "entities": [
+            {
+              "type": "affinity_value",
+              "text": "6.74 nM",
+              "start": 554,
+              "end": 561,
+              "value_range_m": [
+                6.74e-09,
+                6.74e-09
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41991671",
+          "title": "Galectin-4 contributes to the maintenance of expression and activation of multiple receptor-type kinases involved in peritoneal metastasis.",
+          "journal": "Sci Rep",
+          "year": "2026",
+          "citation": "PMID 41991671 (Sci Rep, 2026)",
+          "excerpt": "ctin-4 in signal transduction by identifying interacting molecules and the relationship to glycans. Antibody array analysis and proximity ligation assays revealed a close association between galectin-",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Antibody",
+              "start": 636,
+              "end": 644,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41966431",
+          "title": "Screening and characterization of EGFR-targeted specific nanobodies.",
+          "journal": "Protein Expr Purif",
+          "year": "2026",
+          "citation": "PMID 41966431 (Protein Expr Purif, 2026)",
+          "excerpt": "Screening and characterization of EGFR-targeted specific nanobodies. The epidermal growth factor receptor (EGFR), also known as HER1 or ErbB1, is a member of the ErbB receptor family. It plays a criti",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 57,
+              "end": 67,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 771,
+              "end": 779,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 1051,
+              "end": 1059,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 1567,
+              "end": 1575,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 1830,
+              "end": 1838,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41722284",
+          "title": "Development of a HER1/CP2c dual-targeting biopharmaceutical for HER1-overexpressing head and neck cancer.",
+          "journal": "Biomater Adv",
+          "year": "2026",
+          "citation": "PMID 41722284 (Biomater Adv, 2026)",
+          "excerpt": "minantly expresses human epidermal growth factor receptor 1 (HER1). To selectively eliminate HNSCC, cetuximab was developed as a HER1 targeting monoclonal antibody (mAb) therapy. Despite approval from",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "cetuximab",
+              "start": 464,
+              "end": 473,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 519,
+              "end": 527,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "Cetuximab",
+              "start": 577,
+              "end": 586,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 805,
+              "end": 813,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 997,
+              "end": 1001,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "Cetuximab",
+              "start": 1703,
+              "end": 1712,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1713,
+              "end": 1717,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41655459",
+          "title": "Engineering chain-branched bispecific VHH complexes (\"Dendrobodies\") using SpyCatcher and SnoopCatcher pairings.",
+          "journal": "Biochem Biophys Res Commun",
+          "year": "2026",
+          "citation": "PMID 41655459 (Biochem Biophys Res Commun, 2026)",
+          "excerpt": "Engineering chain-branched bispecific VHH complexes (\"Dendrobodies\") using SpyCatcher and SnoopCatcher pairings. Bispecific antibodies (bsAbs) that direct immune cells toward tumor cells have substant",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 38,
+              "end": 41,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 124,
+              "end": 134,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 285,
+              "end": 295,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 297,
+              "end": 300,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 372,
+              "end": 375,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 544,
+              "end": 547,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 598,
+              "end": 601,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 779,
+              "end": 782,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 1567,
+              "end": 1570,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41498813",
+          "title": "Non-immobilized graphene oxide-based screening of aptamers for non-small cell lung cancer\u00a0(NSCLC) drug resistance biomarkers and development of a nano-detection platform.",
+          "journal": "Mikrochim Acta",
+          "year": "2026",
+          "citation": "PMID 41498813 (Mikrochim Acta, 2026)",
+          "excerpt": "identified calnexin as its specific target for the first time, with a dissociation constant (Kd) of 71.93 nM. Building on this, we developed a label-free gold nanoparticle (AuNP)-based aptamer sensing",
+          "has_affinity": true,
+          "has_binder": false,
+          "entities": [
+            {
+              "type": "affinity_value",
+              "text": "10 to 500 nM",
+              "start": 1331,
+              "end": 1343,
+              "value_range_m": [
+                1e-08,
+                5.000000000000001e-07
+              ],
+              "qualified": false
+            },
+            {
+              "type": "affinity_value",
+              "text": "71.93 nM",
+              "start": 915,
+              "end": 923,
+              "value_range_m": [
+                7.193000000000001e-08,
+                7.193000000000001e-08
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "7.89 nM",
+              "start": 1369,
+              "end": 1376,
+              "value_range_m": [
+                7.89e-09,
+                7.89e-09
+              ],
+              "qualified": false
+            }
+          ]
+        },
+        {
+          "pmid": "41257876",
+          "title": "Identification of internalizing ScFvs for EGFR inhibition and apoptosis induction in cholangiocarcinoma cells.",
+          "journal": "Sci Rep",
+          "year": "2025",
+          "citation": "PMID 41257876 (Sci Rep, 2025)",
+          "excerpt": "Identification of internalizing ScFvs for EGFR inhibition and apoptosis induction in cholangiocarcinoma cells. Cholangiocarcinoma (CCA) is an aggressive malignancy with limited treatment options. EGFR",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "ScFv",
+              "start": 32,
+              "end": 36,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 465,
+              "end": 469,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 531,
+              "end": 535,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 536,
+              "end": 546,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 950,
+              "end": 954,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1669,
+              "end": 1677,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41210310",
+          "title": "Ellagic Acid and Its Nanoparticles Mitigate Atherosclerosis by Elevating Low-Density Lipoprotein Receptor Levels Through Targeting of the Epidermal Growth Factor Receptor.",
+          "journal": "FASEB Bioadv",
+          "year": "2025",
+          "citation": "PMID 41210310 (FASEB Bioadv, 2025)",
+          "excerpt": "the upregulation of low-density lipoprotein receptor (LDLR) expression in HepG2 cells. Furthermore, cetuximab, an EGFR-blocking antibody, inhibits the LDLR upregulation induced by EA, confirming EGFR",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "cetuximab",
+              "start": 1207,
+              "end": 1216,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1235,
+              "end": 1243,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41108118",
+          "title": "Surface plasmon resonance microscopy reveals N-glycosylation driven modulation of affinity and avidity of ErbB receptors in whole single pancreatic cancer cells.",
+          "journal": "Glycobiology",
+          "year": "2025",
+          "citation": "PMID 41108118 (Glycobiology, 2025)",
+          "excerpt": "r avidity modes of binding interaction could be observed. For bivalent Cetuximab (anti-HER1) KDs of 151\u00a0nM and 4.6\u00a0nM were observed, for bivalent Herceptin (anti-HER2) KDs of 2\u00a0nM and 0.1\u00a0nM were obse",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 374,
+              "end": 384,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 772,
+              "end": 782,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "Cetuximab",
+              "start": 1107,
+              "end": 1116,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1719,
+              "end": 1729,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "151 nM",
+              "start": 1136,
+              "end": 1142,
+              "value_range_m": [
+                1.5100000000000002e-07,
+                1.5100000000000002e-07
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "4.6 nM",
+              "start": 1147,
+              "end": 1153,
+              "value_range_m": [
+                4.6e-09,
+                4.6e-09
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "2 nM",
+              "start": 1211,
+              "end": 1215,
+              "value_range_m": [
+                2e-09,
+                2e-09
+              ],
+              "qualified": false
+            },
+            {
+              "type": "affinity_value",
+              "text": "0.1 nM",
+              "start": 1220,
+              "end": 1226,
+              "value_range_m": [
+                1.0000000000000002e-10,
+                1.0000000000000002e-10
+              ],
+              "qualified": false
+            },
+            {
+              "type": "affinity_value",
+              "text": "13 nM",
+              "start": 1276,
+              "end": 1281,
+              "value_range_m": [
+                1.3e-08,
+                1.3e-08
+              ],
+              "qualified": false
+            },
+            {
+              "type": "affinity_value",
+              "text": "1.3 nM",
+              "start": 1286,
+              "end": 1292,
+              "value_range_m": [
+                1.3e-09,
+                1.3e-09
+              ],
+              "qualified": false
+            }
+          ]
+        },
+        {
+          "pmid": "41044367",
+          "title": "TNF-\u03b1 x Fc\u03b1RI bi-specific antibody potentiates neutrophil-mediated anti-tumor effects.",
+          "journal": "Sci Rep",
+          "year": "2025",
+          "citation": "PMID 41044367 (Sci Rep, 2025)",
+          "excerpt": "TNF-\u03b1 x Fc\u03b1RI bi-specific antibody potentiates neutrophil-mediated anti-tumor effects. Immunotherapy has emerged as a promising strategy against cancer, but many patients fail to achieve durable respo",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 26,
+              "end": 34,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 382,
+              "end": 390,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 750,
+              "end": 758,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 842,
+              "end": 850,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41038820",
+          "title": "Dual membrane receptor degradation via folate receptor targeting chimera.",
+          "journal": "Nat Commun",
+          "year": "2025",
+          "citation": "PMID 41038820 (Nat Commun, 2025)",
+          "excerpt": "roof-of-concept studies reveal that EGFR and HER2 FolTAC-dual effectively counteracts resistance in Trastuzumab/Lapatinib-resistant HER2-positive breast cancer models, while PD-L1 and VISTA FolTAC-dua",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "Trastuzumab",
+              "start": 995,
+              "end": 1006,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1135,
+              "end": 1143,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "40517671",
+          "title": "Engineered MAP30ER: A plant toxin-derived platform for EGFR-Targeted delivery of protein and chemotherapeutic payloads.",
+          "journal": "Biochem Biophys Res Commun",
+          "year": "2025",
+          "citation": "PMID 40517671 (Biochem Biophys Res Commun, 2025)",
+          "excerpt": "induced apoptosis through activation of caspase-3/9 and cleavage of PARP1. Furthermore, we extended antibody-drug conjugate (ADC) technology to the MAP30ER platform, constructing a MAP30ER-MMAE conjug",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1495,
+              "end": 1503,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "40347884",
+          "title": "Nanobody-based immunotoxins: A precision tool in the treatment of solid tumors.",
+          "journal": "Int Immunopharmacol",
+          "year": "2025",
+          "citation": "PMID 40347884 (Int Immunopharmacol, 2025)",
+          "excerpt": "Nanobody-based immunotoxins: A precision tool in the treatment of solid tumors. Solid tumors, the main cause of cancer-related death, represent a significant therapeutic challenge due to the high-dens",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Nanobody",
+              "start": 0,
+              "end": 8,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "Nanobody",
+              "start": 265,
+              "end": 273,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 366,
+              "end": 376,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 392,
+              "end": 400,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 422,
+              "end": 432,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 478,
+              "end": 488,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 526,
+              "end": 534,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 731,
+              "end": 741,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 871,
+              "end": 879,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 1671,
+              "end": 1679,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        }
+      ]
+    },
+    "Q9NZQ7": {
+      "target_id": "comp-pdl1-human",
+      "name": "PD-L1 / CD274",
+      "gene_symbol": "CD274",
+      "uniprot_hint": "Q9NZQ7",
+      "ncbi": {
+        "gene_id": "29126",
+        "symbol": "CD274",
+        "full_name": "CD274 molecule",
+        "organism": "Homo sapiens",
+        "taxon_id": "9606",
+        "chromosome": "9",
+        "map_location": "9p24.1",
+        "aliases": [
+          "ADMIO5",
+          "B7-H",
+          "B7H1",
+          "PD-L1",
+          "PDCD1L1",
+          "PDCD1LG1",
+          "PDL1",
+          "hPD-L1"
+        ],
+        "refseq_protein": "NP_054862.1",
+        "protein_name": "programmed cell death 1 ligand 1 isoform a precursor",
+        "protein_length": 290,
+        "gene_url": "https://www.ncbi.nlm.nih.gov/gene/29126",
+        "protein_url": "https://www.ncbi.nlm.nih.gov/protein/NP_054862.1"
+      },
+      "query": "(\"CD274\"[Title/Abstract] OR \"PD-L1\"[Title/Abstract] OR \"ADMIO5\"[Title/Abstract] OR \"B7-H\"[Title/Abstract] OR \"B7H1\"[Title/Abstract] OR \"PDCD1L1\"[Title/Abstract] OR \"PDCD1LG1\"[Title/Abstract] OR \"PDL1\"[Title/Abstract] OR \"hPD-L1\"[Title/Abstract]) AND (antibody OR nanobody OR VHH OR scFv OR affibody OR \"binding protein\") AND (\"dissociation constant\" OR \"binding affinity\" OR \"surface plasmon resonance\" OR \"biolayer interferometry\") AND hasabstract",
+      "n_retrieved": 20,
+      "n_with_evidence": 20,
+      "records": [
+        {
+          "pmid": "42524378",
+          "title": "HLA class I-specific nucleolin peptides induce therapeutic T cells in triple-negative breast cancer patients.",
+          "journal": "Int J Biol Sci",
+          "year": "2026",
+          "citation": "PMID 42524378 (Int J Biol Sci, 2026)",
+          "excerpt": "a broadly applicable immunogenic peptide. Furthermore, the combination of NCL-specific T cells with atezolizumab enhanced anti-tumor activity, suggesting the potential benefit of combining NCL-targete",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "atezolizumab",
+              "start": 1579,
+              "end": 1591,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "atezolizumab",
+              "start": 1832,
+              "end": 1844,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42497523",
+          "title": "Discovery of natural product-derived rosavin as a programmed death-ligand 1 inhibitor for cancer immunotherapy.",
+          "journal": "Phytomedicine",
+          "year": "2026",
+          "citation": "PMID 42497523 (Phytomedicine, 2026)",
+          "excerpt": "1 inhibitor for cancer immunotherapy. BACKGROUND: Given the limitations of the existing monoclonal antibody (mAb)-based therapies, more efficient and safer small-molecule-based checkpoint therapies t",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 173,
+              "end": 181,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42360585",
+          "title": "Podcast on the Emerging Role of PD-(L)1/VEGF Bispecific Antibodies in the Evolving Advanced Renal Cell Carcinoma Treatment Landscape.",
+          "journal": "Oncol Ther",
+          "year": "2026",
+          "citation": "PMID 42360585 (Oncol Ther, 2026)",
+          "excerpt": "Podcast on the Emerging Role of PD-(L)1/VEGF Bispecific Antibodies in the Evolving Advanced Renal Cell Carcinoma Treatment Landscape. Combinations of an immune checkpoint inhibitor (ICI)\u00a0+\u00a0anti-progra",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Antibodies",
+              "start": 56,
+              "end": 66,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1088,
+              "end": 1098,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1700,
+              "end": 1710,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1858,
+              "end": 1868,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42334414",
+          "title": "MT3-KN035 Nanoparticles Based on PD-L1 Nanobodies Allow for Multiple Drug Conjugations that Promote Chemo- and Immunosynergistic Therapies.",
+          "journal": "ACS Biomater Sci Eng",
+          "year": "2026",
+          "citation": "PMID 42334414 (ACS Biomater Sci Eng, 2026)",
+          "excerpt": "MT3-KN035 Nanoparticles Based on PD-L1 Nanobodies Allow for Multiple Drug Conjugations that Promote Chemo- and Immunosynergistic Therapies. Nanobody-based therapeutics that incorporate multifunctional",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Nanobodies",
+              "start": 39,
+              "end": 49,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "Nanobody",
+              "start": 140,
+              "end": 148,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 221,
+              "end": 231,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 233,
+              "end": 241,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 495,
+              "end": 503,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 640,
+              "end": 648,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 799,
+              "end": 807,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 1575,
+              "end": 1583,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42269274",
+          "title": "Engineering and characterization of a novel PD-L1/VEGF bispecific antibody with enhanced VEGF-neutralizing capacity.",
+          "journal": "Biochem Biophys Res Commun",
+          "year": "2026",
+          "citation": "PMID 42269274 (Biochem Biophys Res Commun, 2026)",
+          "excerpt": "cture. Surface plasmon resonance (SPR) analysis revealed that PLVBP binds to PD-L1 and VEGF165 with sub-nanomolar affinities. Functional assays demonstrated that PLVBP maintained potent PD-L1 binding",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 66,
+              "end": 74,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 302,
+              "end": 310,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 362,
+              "end": 370,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "epitope",
+              "text": "domain II",
+              "start": 434,
+              "end": 443,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "sub-nanomolar",
+              "start": 786,
+              "end": 799,
+              "value_range_m": [
+                1e-10,
+                1e-09
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42248963",
+          "title": "In silico screen identifies Pranidipine as a potential inhibitor of the PD-1/PD-L1 immune checkpoint.",
+          "journal": "Sci Rep",
+          "year": "2026",
+          "citation": "PMID 42248963 (Sci Rep, 2026)",
+          "excerpt": "/PD-L1 immune checkpoint. Immune checkpoint blockade targeting the PD-1/PD-L1 axis using monoclonal antibodies has revolutionized cancer therapy by inducing durable antitumor responses across multiple",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 176,
+              "end": 186,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 300,
+              "end": 308,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42185552",
+          "title": "In silico discovery of novel small-molecule PD-L1 inhibitors through a multi-stage computational workflow integrating machine learning and molecular dynamics.",
+          "journal": "J Comput Aided Mol Des",
+          "year": "2026",
+          "citation": "PMID 42185552 (J Comput Aided Mol Des, 2026)",
+          "excerpt": "modern oncology; however, developing small-molecule inhibitors as viable alternatives to monoclonal antibodies remains a major challenge. In this study, an integrated computational framework is establ",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 329,
+              "end": 339,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42145843",
+          "title": "A Peptide Inhibitor of Lymphocyte Activation Gene-3 Interaction with Fibrinogen-like Protein 1 Synergizes with Programmed Death-Ligand 1 Blockade to Restore T Cell Activity and Inhibit Tumor Growth.",
+          "journal": "Biomater Res",
+          "year": "2026",
+          "citation": "PMID 42145843 (Biomater Res, 2026)",
+          "excerpt": "rentially bound to LAG-3-expressing cells and recombinant LAG-3 protein. A LAG-3 D1 domain-blocking antibody competitively inhibited the peptide binding to LAG-3-expressing cells, confirming target sp",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 809,
+              "end": 817,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1371,
+              "end": 1379,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42128116",
+          "title": "A bifunctional CPG2-anti PD-L1 fusion protein combining specific tumor targeting and enzyme-mediated prodrug activation.",
+          "journal": "Int J Biol Macromol",
+          "year": "2026",
+          "citation": "PMID 42128116 (Int J Biol Macromol, 2026)",
+          "excerpt": "nd purified. Cell-ELISA revealed values for the Nb and fusion protein against MDA-MB-231 (12.97 vs. 25.86\u00a0nM) and RKO (11.75 vs. 24.36\u00a0nM) cells, respectively. Despite a moderate shift in Kd values, t",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 236,
+              "end": 244,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 570,
+              "end": 578,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "25.86 nM",
+              "start": 1216,
+              "end": 1224,
+              "value_range_m": [
+                2.586e-08,
+                2.586e-08
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "24.36 nM",
+              "start": 1245,
+              "end": 1253,
+              "value_range_m": [
+                2.436e-08,
+                2.436e-08
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "31.82 \u03bcM",
+              "start": 1542,
+              "end": 1550,
+              "value_range_m": [
+                3.182e-05,
+                3.182e-05
+              ],
+              "qualified": false
+            }
+          ]
+        },
+        {
+          "pmid": "42104144",
+          "title": "\u03b2-elemene enhances the efficacy of PD-L1 inhibitor in lung cancer by reprogramming tumor-associated macrophages to M1 phenotype via suppressing FLT1/PI3K/AKT signaling.",
+          "journal": "Cancer Immunol Immunother",
+          "year": "2026",
+          "citation": "PMID 42104144 (Cancer Immunol Immunother, 2026)",
+          "excerpt": "a suppressing FLT1/PI3K/AKT signaling. Immune checkpoint inhibitors (ICI), epitomized by PD-1/PD-L1 antibodies, have ushered in a new era in lung cancer treatment. However, ICI monotherapy is only app",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 230,
+              "end": 240,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 605,
+              "end": 613,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41939214",
+          "title": "Multivalent Atezolizumab-Liposome Conjugates as Active Immunotherapeutic Platforms for Enhanced PD-L1 Blockade in Melanoma.",
+          "journal": "Int J Nanomedicine",
+          "year": "2026",
+          "citation": "PMID 41939214 (Int J Nanomedicine, 2026)",
+          "excerpt": "Multivalent Atezolizumab-Liposome Conjugates as Active Immunotherapeutic Platforms for Enhanced PD-L1 Blockade in Melanoma. PURPOSE: Anti-programmed death ligand-1 monoclonal antibody (anti-PD-L1 mAb)",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_named",
+              "text": "Atezolizumab",
+              "start": 12,
+              "end": 24,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 175,
+              "end": 183,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 594,
+              "end": 602,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 648,
+              "end": 658,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_named",
+              "text": "atezolizumab",
+              "start": 816,
+              "end": 828,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1573,
+              "end": 1583,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1864,
+              "end": 1874,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 2047,
+              "end": 2057,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 2401,
+              "end": 2411,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41936750",
+          "title": "Proof-of-concept study of clinical use of blood-based MAVS biosensor in predicting immunotherapy response in SCLC patients.",
+          "journal": "Transl Oncol",
+          "year": "2026",
+          "citation": "PMID 41936750 (Transl Oncol, 2026)",
+          "excerpt": "g chemo-immunotherapy, with or without radiotherapy. The biosensor achieved a limit of detection of 0.13 nM in human diluted serum and demonstrated high selectivity against common serum proteins. In a",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 768,
+              "end": 778,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "0.13 nM",
+              "start": 938,
+              "end": 945,
+              "value_range_m": [
+                1.3000000000000002e-10,
+                1.3000000000000002e-10
+              ],
+              "qualified": false
+            }
+          ]
+        },
+        {
+          "pmid": "41904276",
+          "title": "The impact of PD-1 mutations on pembrolizumab binding: insights from molecular dynamics and MM-GBSA analysis.",
+          "journal": "Sci Rep",
+          "year": "2026",
+          "citation": "PMID 41904276 (Sci Rep, 2026)",
+          "excerpt": "immune surveillance, making PD-1 a key target in cancer immunotherapy. Pembrolizumab, a monoclonal antibody targeting PD-1, disrupts this interaction, restoring immune responses against tumors. Given",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 405,
+              "end": 413,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41804385",
+          "title": "IMM2510, a novel anti-PD-L1/VEGF bispecific antibody for cancer immunotherapy.",
+          "journal": "Antib Ther",
+          "year": "2026",
+          "citation": "PMID 41804385 (Antib Ther, 2026)",
+          "excerpt": "IMM2510, a novel anti-PD-L1/VEGF bispecific antibody for cancer immunotherapy. BACKGROUND: Dual inhibition of PD-1/PD-L1 and VEGF/VEGFR pathways is a promising strategy to overcome tumor immune evasio",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 44,
+              "end": 52,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 271,
+              "end": 279,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 433,
+              "end": 441,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41747173",
+          "title": "Anti-Tumor Immunotherapy of Scutellaria Baicalensis-Derived Vesicles on Immune Checkpoint Modulation in Colorectal Cancer.",
+          "journal": "Aging Dis",
+          "year": "2026",
+          "citation": "PMID 41747173 (Aging Dis, 2026)",
+          "excerpt": "g PD-1/PD-L1 shows promising therapeutic potential in cancer patients. However, the efficacy of its antibody in colorectal cancer remains limited due to the immunosuppressive tumor microenvironment (T",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 264,
+              "end": 272,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41601359",
+          "title": "Bioactive Sphingolipids of Cordyceps sinensis Modulate Tumor Immunity Through the SphK1-Mediated Cer/S1P Axis.",
+          "journal": "Phytother Res",
+          "year": "2026",
+          "citation": "PMID 41601359 (Phytother Res, 2026)",
+          "excerpt": "namide A, was identified as a key bioactive constituent and shown to bind directly to SphK1 (IC\u2085\u2080\u2009=\u200928.45\u2009\u03bcM; KD\u2009=\u200914.4\u2009\u03bcM), stabilizing its structure and inhibiting S1P production. This shift increas",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 461,
+              "end": 469,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "28.45 \u03bcM",
+              "start": 1426,
+              "end": 1434,
+              "value_range_m": [
+                2.8449999999999997e-05,
+                2.8449999999999997e-05
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "14.4 \u03bcM",
+              "start": 1441,
+              "end": 1448,
+              "value_range_m": [
+                1.44e-05,
+                1.44e-05
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41539507",
+          "title": "Rational design of peptide-based programmed cell death 1 immune checkpoint inhibitors using advanced integrated computational approach.",
+          "journal": "Int J Biol Macromol",
+          "year": "2026",
+          "citation": "PMID 41539507 (Int J Biol Macromol, 2026)",
+          "excerpt": "checkpoint axis frequently exploited by cancer cells to evade immune detection. Although monoclonal antibodies targeting this pathway have demonstrated clinical efficacy, their limitations have prompt",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 356,
+              "end": 366,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41513409",
+          "title": "ROSE12, a novel anti-CTLA-4 Fc\u03b3Rs binding-enhanced antibody activated by extracellular adenosine triphosphate, shows tumor-selective regulatory T-cell depletion and antitumor efficacy without systemic immune activation.",
+          "journal": "J Immunother Cancer",
+          "year": "2026",
+          "citation": "PMID 41513409 (J Immunother Cancer, 2026)",
+          "excerpt": "ROSE12, a novel anti-CTLA-4 Fc\u03b3Rs binding-enhanced antibody activated by extracellular adenosine triphosphate, shows tumor-selective regulatory T-cell depletion and antitumor efficacy without systemic",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 51,
+              "end": 59,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 900,
+              "end": 908,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1004,
+              "end": 1012,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 2615,
+              "end": 2625,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41511395",
+          "title": "Sym024 Interacts with a Unique Epitope on the CD73 Homodimer, Favoring Effective Bivalent Binding to Improve Anti-PD-1 Therapy.",
+          "journal": "Clin Cancer Res",
+          "year": "2026",
+          "citation": "PMID 41511395 (Clin Cancer Res, 2026)",
+          "excerpt": "s. In this study, we sought to identify, characterize, and benchmark a novel antagonistic anti-CD73 antibody, Sym024 (S95024), and to structurally decode its mode of action. EXPERIMENTAL DESIGN: Sym02",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 668,
+              "end": 676,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 795,
+              "end": 803,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 865,
+              "end": 875,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1642,
+              "end": 1652,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41365923",
+          "title": "De novo design of epitope-specific antibodies via a structure-driven computational workflow.",
+          "journal": "Nat Commun",
+          "year": "2025",
+          "citation": "PMID 41365923 (Nat Commun, 2025)",
+          "excerpt": "De novo design of epitope-specific antibodies via a structure-driven computational workflow. Accurate modeling of antibody-antigen complex structures holds significant potential for advancing biomedic",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 35,
+              "end": 45,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 114,
+              "end": 122,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 242,
+              "end": 252,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 296,
+              "end": 304,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 356,
+              "end": 364,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 546,
+              "end": 554,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 588,
+              "end": 596,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 699,
+              "end": 707,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 764,
+              "end": 774,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1037,
+              "end": 1047,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1323,
+              "end": 1331,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        }
+      ]
+    },
+    "Q9HC97": {
+      "target_id": "comp-gpr35-human",
+      "name": "GPR35",
+      "gene_symbol": "GPR35",
+      "uniprot_hint": "Q9HC97",
+      "ncbi": {
+        "gene_id": "2859",
+        "symbol": "GPR35",
+        "full_name": "G protein-coupled receptor 35",
+        "organism": "Homo sapiens",
+        "taxon_id": "9606",
+        "chromosome": "2",
+        "map_location": "2q37.3",
+        "aliases": [],
+        "refseq_protein": "NP_005292.2",
+        "protein_name": "G protein-coupled receptor 35 isoform a",
+        "protein_length": 309,
+        "gene_url": "https://www.ncbi.nlm.nih.gov/gene/2859",
+        "protein_url": "https://www.ncbi.nlm.nih.gov/protein/NP_005292.2"
+      },
+      "query": "(\"GPR35\"[Title/Abstract]) AND (antibody OR nanobody OR VHH OR scFv OR affibody OR \"binding protein\") AND (\"dissociation constant\" OR \"binding affinity\" OR \"surface plasmon resonance\" OR \"biolayer interferometry\") AND hasabstract",
+      "n_retrieved": 0,
+      "n_with_evidence": 0,
+      "records": []
+    },
+    "P11836": {
+      "target_id": "comp-cd20-human",
+      "name": "CD20 / MS4A1",
+      "gene_symbol": "MS4A1",
+      "uniprot_hint": "P11836",
+      "ncbi": {
+        "gene_id": "931",
+        "symbol": "MS4A1",
+        "full_name": "membrane spanning 4-domains A1",
+        "organism": "Homo sapiens",
+        "taxon_id": "9606",
+        "chromosome": "11",
+        "map_location": "11q12.2",
+        "aliases": [
+          "B1",
+          "Bp35",
+          "CD20",
+          "CVID5",
+          "FMC7",
+          "LEU-16",
+          "S7"
+        ],
+        "refseq_protein": "NP_068769.2",
+        "protein_name": "B-lymphocyte antigen CD20",
+        "protein_length": 297,
+        "gene_url": "https://www.ncbi.nlm.nih.gov/gene/931",
+        "protein_url": "https://www.ncbi.nlm.nih.gov/protein/NP_068769.2"
+      },
+      "query": "(\"MS4A1\"[Title/Abstract] OR \"CD20\"[Title/Abstract] OR \"Bp35\"[Title/Abstract] OR \"CVID5\"[Title/Abstract] OR \"FMC7\"[Title/Abstract] OR \"LEU-16\"[Title/Abstract]) AND (antibody OR nanobody OR VHH OR scFv OR affibody OR \"binding protein\") AND (\"dissociation constant\" OR \"binding affinity\" OR \"surface plasmon resonance\" OR \"biolayer interferometry\") AND hasabstract",
+      "n_retrieved": 20,
+      "n_with_evidence": 20,
+      "records": [
+        {
+          "pmid": "42551299",
+          "title": "Innovative Zr-MOF-driven ECL-RET system: highly specific rituximab detection with epitope mimetic peptide CN-14.",
+          "journal": "Bioelectrochemistry",
+          "year": "2026",
+          "citation": "PMID 42551299 (Bioelectrochemistry, 2026)",
+          "excerpt": "ximab detection with epitope mimetic peptide CN-14. Therapeutic drug monitoring (TDM) of monoclonal antibodies (mAbs) is critical for realizing personalized dosing and optimizing the benefit-to-risk r",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 161,
+              "end": 171,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42331022",
+          "title": "Impact of Clustered Antigenic Architectures on the Adhesion of Monoclonal Antibodies: Insights from Biomimetic Model Surfaces.",
+          "journal": "Anal Chem",
+          "year": "2026",
+          "citation": "PMID 42331022 (Anal Chem, 2026)",
+          "excerpt": "Impact of Clustered Antigenic Architectures on the Adhesion of Monoclonal Antibodies: Insights from Biomimetic Model Surfaces. Monoclonal antibodies, thanks to their high affinity and specificity for",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Antibodies",
+              "start": 74,
+              "end": 84,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 138,
+              "end": 148,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 683,
+              "end": 691,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 831,
+              "end": 839,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 840,
+              "end": 848,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1810,
+              "end": 1818,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42146546",
+          "title": "An approach for single-amino-acid resolution epitope mapping by kinetic affinity screening of antibody drugs against biosensor on-chip library of deep mutationally-scanned target variants.",
+          "journal": "bioRxiv",
+          "year": "2026",
+          "citation": "PMID 42146546 (bioRxiv, 2026)",
+          "excerpt": "An approach for single-amino-acid resolution epitope mapping by kinetic affinity screening of antibody drugs against biosensor on-chip library of deep mutationally-scanned target variants. Epitope map",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 94,
+              "end": 102,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 228,
+              "end": 236,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1082,
+              "end": 1092,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1807,
+              "end": 1817,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 2388,
+              "end": 2398,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 2589,
+              "end": 2597,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 2740,
+              "end": 2748,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42034063",
+          "title": "Pharmacologic glycoengineering of Fc\u03b3 receptor IIIa enhances force-resistant IgG-Fc\u03b3R interactions and anti-tumor antibody efficacy.",
+          "journal": "Immunity",
+          "year": "2026",
+          "citation": "PMID 42034063 (Immunity, 2026)",
+          "excerpt": "glycoengineering of Fc\u03b3 receptor IIIa enhances force-resistant IgG-Fc\u03b3R interactions and anti-tumor antibody efficacy. Therapeutic monoclonal antibodies (mAbs) are central to cancer treatment but ofte",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 114,
+              "end": 122,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 156,
+              "end": 166,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 963,
+              "end": 971,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "42031170",
+          "title": "Impact of heme on the therapeutic efficacy of anti-CD20 antibodies.",
+          "journal": "J Biol Chem",
+          "year": "2026",
+          "citation": "PMID 42031170 (J Biol Chem, 2026)",
+          "excerpt": "Impact of heme on the therapeutic efficacy of anti-CD20 antibodies. Polyreactivity, the capacity of antibodies to recognize unrelated antigens, is often an undesirable trait in therapeutic antibodies,",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 56,
+              "end": 66,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 100,
+              "end": 110,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 189,
+              "end": 199,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 318,
+              "end": 328,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 504,
+              "end": 514,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 638,
+              "end": 648,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 697,
+              "end": 705,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1487,
+              "end": 1497,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1594,
+              "end": 1604,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41731244",
+          "title": "Integrating B Cell Differentiation Model With Real-World Data Informs Determinants for Antibody-Secreting Cell Depletions in Systemic Sclerosis.",
+          "journal": "CPT Pharmacometrics Syst Pharmacol",
+          "year": "2026",
+          "citation": "PMID 41731244 (CPT Pharmacometrics Syst Pharmacol, 2026)",
+          "excerpt": "Integrating B Cell Differentiation Model With Real-World Data Informs Determinants for Antibody-Secreting Cell Depletions in Systemic Sclerosis. Systemic sclerosis (SSc) is a complex autoimmune disord",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Antibody",
+              "start": 87,
+              "end": 95,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 903,
+              "end": 911,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41572519",
+          "title": "Soluble Antigen Array Displaying Proinsulin(F25D) Selectively Targets Anti-insulin B Cells without Hormonal Effects.",
+          "journal": "Mol Pharm",
+          "year": "2026",
+          "citation": "PMID 41572519 (Mol Pharm, 2026)",
+          "excerpt": "Furthermore, this SAgA successfully bound a disease-relevant monoclonal anti-insulin antibody with low nanomolar binding affinity and murine transgenic (Tg125) B cells specific for human insulin. Thi",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1076,
+              "end": 1086,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1296,
+              "end": 1304,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1542,
+              "end": 1550,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "low nanomolar",
+              "start": 1310,
+              "end": 1323,
+              "value_range_m": [
+                1e-09,
+                1e-08
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41391480",
+          "title": "A Generalized Minimal PBPK-PD Model of Bispecific Antibodies: Case Studies and Applications in Drug Development.",
+          "journal": "CPT Pharmacometrics Syst Pharmacol",
+          "year": "2026",
+          "citation": "PMID 41391480 (CPT Pharmacometrics Syst Pharmacol, 2026)",
+          "excerpt": "A Generalized Minimal PBPK-PD Model of Bispecific Antibodies: Case Studies and Applications in Drug Development. Bispecific antibodies (bsAbs), for which each arm binds a distinct molecular target, ar",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Antibodies",
+              "start": 50,
+              "end": 60,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 124,
+              "end": 134,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1260,
+              "end": 1268,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41319471",
+          "title": "Computational design of CAR-scFv linker variants for enhanced CD20 binding against B-cell malignancies.",
+          "journal": "Comput Biol Med",
+          "year": "2026",
+          "citation": "PMID 41319471 (Comput Biol Med, 2026)",
+          "excerpt": "Computational design of CAR-scFv linker variants for enhanced CD20 binding against B-cell malignancies. Chimeric Antigen Receptor (CAR)-T cell therapy is a transformative immunotherapy that engineer's",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 28,
+              "end": 32,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 836,
+              "end": 844,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 883,
+              "end": 887,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1117,
+              "end": 1121,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1255,
+              "end": 1259,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1400,
+              "end": 1404,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1652,
+              "end": 1656,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1704,
+              "end": 1708,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "scFv",
+              "start": 1805,
+              "end": 1809,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "41288276",
+          "title": "B Cell Differentiation Model for Identifying Predictors of Responses to Rituximab-Mediated B Cell Depletion in Rheumatic Diseases.",
+          "journal": "CPT Pharmacometrics Syst Pharmacol",
+          "year": "2026",
+          "citation": "PMID 41288276 (CPT Pharmacometrics Syst Pharmacol, 2026)",
+          "excerpt": "Rituximab-Mediated B Cell Depletion in Rheumatic Diseases. Rituximab (RTX), an anti-CD20 monoclonal antibody, has been used to treat autoimmune diseases such as rheumatoid arthritis (RA). However, var",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 172,
+              "end": 180,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 411,
+              "end": 419,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 1017,
+              "end": 1027,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "40663321",
+          "title": "Resemblance-Ranking Peptide Library as a Representation of a Complex Proteome.",
+          "journal": "Methods Mol Biol",
+          "year": "2025",
+          "citation": "PMID 40663321 (Methods Mol Biol, 2025)",
+          "excerpt": ", prioritizing peptides with the highest occurrence in the proteome. Using the monoclonal anti-CD20 antibody rituximab, we demonstrate the process of peptide library design, incubation, and photometri",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 573,
+              "end": 581,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "40655549",
+          "title": "Plant-related quality attributes affecting Fc\u03b3RIIIa binding: affinity chromatography analysis of rituximab glycovariants from Nicotiana benthamiana.",
+          "journal": "Front Plant Sci",
+          "year": "2025",
+          "citation": "PMID 40655549 (Front Plant Sci, 2025)",
+          "excerpt": "affinity chromatography analysis of rituximab glycovariants from Nicotiana benthamiana. Monoclonal antibodies (mAb) produced in plants, known as plantibodies, represent a cost-effective alternative t",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 160,
+              "end": 170,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 208,
+              "end": 218,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 474,
+              "end": 482,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 595,
+              "end": 603,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 927,
+              "end": 937,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1140,
+              "end": 1148,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1663,
+              "end": 1671,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "39321199",
+          "title": "TFAB002s, novel CD20-targeting T cell-dependent bispecific Fab-FabCH3 antibodies, exhibit potent antitumor efficacy against malignant B-cell lymphoma.",
+          "journal": "PLoS One",
+          "year": "2024",
+          "citation": "PMID 39321199 (PLoS One, 2024)",
+          "excerpt": "TFAB002s, novel CD20-targeting T cell-dependent bispecific Fab-FabCH3 antibodies, exhibit potent antitumor efficacy against malignant B-cell lymphoma. B-cell lymphoma, clinically, comprises a heteroge",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 70,
+              "end": 80,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 303,
+              "end": 313,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 587,
+              "end": 597,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "38874667",
+          "title": "CDR grafting and site-directed mutagenesis approach for the generation and affinity maturation of Anti-CD20 nanobody.",
+          "journal": "Mol Biol Rep",
+          "year": "2024",
+          "citation": "PMID 38874667 (Mol Biol Rep, 2024)",
+          "excerpt": "ting and site-directed mutagenesis approach for the generation and affinity maturation of Anti-CD20 nanobody. BACKGROUND: Recently, new and advanced techniques have been adopted to design and produce",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "nanobody",
+              "start": 108,
+              "end": 116,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 208,
+              "end": 218,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 294,
+              "end": 304,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 589,
+              "end": 599,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 641,
+              "end": 651,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 785,
+              "end": 793,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 797,
+              "end": 800,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 855,
+              "end": 865,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "VHH",
+              "start": 925,
+              "end": 928,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 981,
+              "end": 991,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 1134,
+              "end": 1144,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 1305,
+              "end": 1315,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 1327,
+              "end": 1337,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 1497,
+              "end": 1507,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "nanobodies",
+              "start": 1695,
+              "end": 1705,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "38562013",
+          "title": "Supramolecular Mimotope Peptide Nanofibers Promote Antibody-Ligand Polyvalent and Instantaneous Recognition for Biopharmaceutical Analysis.",
+          "journal": "Anal Chem",
+          "year": "2024",
+          "citation": "PMID 38562013 (Anal Chem, 2024)",
+          "excerpt": "ibers exhibited rapid self-assembly within only 1 min and robust stability. Their binding affinity (179 nM) for rituximab surpassed that of the monomeric peptide (7 \u03bcM) by over 38-fold, highlighting t",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "Antibody",
+              "start": 51,
+              "end": 59,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 430,
+              "end": 438,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 750,
+              "end": 758,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1283,
+              "end": 1291,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "179 nM",
+              "start": 883,
+              "end": 889,
+              "value_range_m": [
+                1.79e-07,
+                1.79e-07
+              ],
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "7 \u03bcM",
+              "start": 946,
+              "end": 950,
+              "value_range_m": [
+                7e-06,
+                7e-06
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "38437725",
+          "title": "CD19-CD28: an affinity-optimized CD28 agonist for\u00a0combination with glofitamab (CD20-TCB) as off-the-shelf immunotherapy.",
+          "journal": "Blood",
+          "year": "2024",
+          "citation": "PMID 38437725 (Blood, 2024)",
+          "excerpt": "Rs; \"signal 1\"), but also the availability of costimulatory signals (\"signal 2\"). T-cell bispecific antibodies (TCBs) deliver a robust signal 1 by engaging the TCR signaling component CD3\u03b5, while simu",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 303,
+              "end": 313,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 925,
+              "end": 933,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "37952787",
+          "title": "A transmembrane scaffold from CD20 helps recombinant expression of a chimeric claudin 18.2 in an in vitro coupled transcription and translation system.",
+          "journal": "Protein Expr Purif",
+          "year": "2024",
+          "citation": "PMID 37952787 (Protein Expr Purif, 2024)",
+          "excerpt": "ncer. However, their poor solubility and toxic nature often hinder downstream applications, such as antibody drug development. Therefore, developing a cost-effective method for producing drug targets",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 525,
+              "end": 533,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1297,
+              "end": 1305,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "37804003",
+          "title": "Inebilizumab reduces neuromyelitis optica spectrum disorder risk independent of FCGR3A polymorphism.",
+          "journal": "Ann Clin Transl Neurol",
+          "year": "2023",
+          "citation": "PMID 37804003 (Ann Clin Transl Neurol, 2023)",
+          "excerpt": "isk independent of FCGR3A polymorphism. Inebilizumab, a humanized, glycoengineered, IgG1 monoclonal antibody that depletes CD19+ B-cells, is approved to treat aquaporin 4 (AQP4) IgG-seropositive neuro",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 161,
+              "end": 169,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 446,
+              "end": 454,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "37249578",
+          "title": "Noncovalent antibody catenation on a target surface greatly increases the antigen-binding avidity.",
+          "journal": "Elife",
+          "year": "2023",
+          "citation": "PMID 37249578 (Elife, 2023)",
+          "excerpt": "ation showed that quite low homodimerization affinity of a catenator, e.g. dissociation constant of 100 \u03bcM, can enhance nanomolar antigen-binding avidity to a picomolar level, and that the fold enhanc",
+          "has_affinity": true,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 12,
+              "end": 20,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 122,
+              "end": 132,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 348,
+              "end": 356,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 980,
+              "end": 990,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1118,
+              "end": 1126,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1177,
+              "end": 1185,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1306,
+              "end": 1314,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "binder_generic",
+              "text": "antibody",
+              "start": 1370,
+              "end": 1378,
+              "value_range_m": null,
+              "qualified": true
+            },
+            {
+              "type": "affinity_value",
+              "text": "100 \u03bcM",
+              "start": 649,
+              "end": 655,
+              "value_range_m": [
+                9.999999999999999e-05,
+                9.999999999999999e-05
+              ],
+              "qualified": true
+            }
+          ]
+        },
+        {
+          "pmid": "36942068",
+          "title": "Computational and Experimental Evaluation of Linker Peptides and Thioredoxin Fusion Tag in CD20-rituximab Specific Interactions.",
+          "journal": "Iran J Pharm Res",
+          "year": "2022",
+          "citation": "PMID 36942068 (Iran J Pharm Res, 2022)",
+          "excerpt": "avorable than the full-length transmembrane CD20 in the affinity assessment of anti-CD20 monoclonal antibodies (mAbs). METHODS: The sequence of these epitopes was extracted, and the effects of differe",
+          "has_affinity": false,
+          "has_binder": true,
+          "entities": [
+            {
+              "type": "binder_generic",
+              "text": "antibodies",
+              "start": 418,
+              "end": 428,
+              "value_range_m": null,
+              "qualified": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
