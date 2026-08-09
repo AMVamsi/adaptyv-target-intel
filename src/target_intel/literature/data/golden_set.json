@@ -1,0 +1,68 @@
+[
+  {
+    "target_hint": "EVAL_RICH_1", "label": 1,
+    "abstracts": [
+      "Adalimumab binds domain II of the target receptor with reported affinities of 0.1 to 1 nanomolar, and is considered a validated, well-characterized binder for this clinically important epitope.",
+      "Several nanobody binders against domain II have been reported in the low nanomolar range, consistent with adalimumab and supporting domain II as a dominant, widely cited epitope."
+    ]
+  },
+  {
+    "target_hint": "EVAL_RICH_2", "label": 1,
+    "abstracts": [
+      "Infliximab binds domain III with affinities around 1 to 5 nanomolar; this epitope is well-characterized and validated across multiple independent studies.",
+      "Golimumab binds an overlapping domain III epitope with comparable low nanomolar affinity, further supporting domain III as the dominant validated site."
+    ]
+  },
+  {
+    "target_hint": "EVAL_RICH_3", "label": 1,
+    "abstracts": [
+      "Ustekinumab binds the p40 domain with sub-nanomolar affinity and is a clinically validated, dominant binder for this epitope.",
+      "Briakinumab binds an adjacent p40 domain epitope with low nanomolar affinity, reinforcing this as a well-characterized binding region.",
+      "Engineered scFv binders against the p40 domain have been reported at 0.5 to 3 nanomolar, consistent with the validated antibody binders above.",
+      "The p40 domain remains the dominant, widely cited epitope for this target across the antibody engineering literature."
+    ]
+  },
+  {
+    "target_hint": "EVAL_MED_1", "label": 1,
+    "abstracts": [
+      "Nanobody binders against this receptor have been reported with affinities of 2 to 8 nanomolar in early-stage engineering studies.",
+      "Additional scFv binder scaffolds targeting the same receptor show affinities in the low nanomolar range, though a single dominant epitope has not yet been widely cited."
+    ]
+  },
+  {
+    "target_hint": "EVAL_MED_3", "label": 1,
+    "abstracts": [
+      "Omalizumab binds domain I with reported affinity around 3 nanomolar and is a validated binder for this epitope.",
+      "Related nanobody binders against the same target show comparable low nanomolar affinities in independent engineering studies."
+    ]
+  },
+  {
+    "target_hint": "EVAL_MED_2", "label": 0,
+    "abstracts": [
+      "A single antibody binder against this target has been reported with affinity around 6 nanomolar; independent confirmation is not yet available in the literature."
+    ]
+  },
+  {
+    "target_hint": "EVAL_SPARSE_1", "label": 0,
+    "abstracts": [
+      "This receptor is an orphan target with very few reported ligands and no widely cited validated extracellular binding epitope."
+    ]
+  },
+  {
+    "target_hint": "EVAL_SPARSE_2", "label": 0,
+    "abstracts": [
+      "To date there are very few published protein-based affinity measurements against this target.",
+      "The literature on this receptor remains sparse, with no widely cited validated epitope comparable to well-studied oncology targets."
+    ]
+  },
+  {
+    "target_hint": "EVAL_SPARSE_4", "label": 0,
+    "abstracts": [
+      "One early report describes weak binding around 40 nanomolar against this orphan receptor, but this remains an uncommon, unconfirmed observation."
+    ]
+  },
+  {
+    "target_hint": "EVAL_SPARSE_5", "label": 0,
+    "abstracts": []
+  }
+]
