@@ -73,6 +73,16 @@
 
   section { margin-bottom: 44px; }
 
+  .provenance-note {
+    font-size: 12.5px; color: var(--text-muted); line-height: 1.55;
+    margin-top: 10px; max-width: 78ch;
+  }
+  .provenance-note strong { color: var(--text-dim); font-weight: 600; }
+  .section-note {
+    font-size: 12.5px; color: var(--text-muted); line-height: 1.55;
+    margin: -4px 0 14px; max-width: 92ch;
+  }
+  .section-note strong { color: var(--text-dim); font-weight: 600; }
   .section-label {
     font-family: var(--font-mono);
     font-size: 11px;
@@ -305,19 +315,31 @@
 <div class="wrap">
 
   <header class="top">
-    <div class="eyebrow">Adaptyv Foundry &middot; Literature-Grounded Result Interpretation</div>
+    <!-- The eyebrow used to read "Adaptyv Foundry - Literature-Grounded Result
+         Interpretation". This page is published at a personal GitHub Pages URL
+         and linked from the repo's About field, so it gets seen with no README
+         around it, and that wording read as official Adaptyv tooling. It isn't. -->
+    <div class="eyebrow">target-intel &middot; prototype built for an Adaptyv Bio take-home &middot; not an Adaptyv product</div>
     <h1>Target Intelligence Console</h1>
     <p>Confidence-calibrated, citation-backed read on every target and result in the portfolio — what's already known in the literature, and whether each result agrees with it.</p>
+    <p class="provenance-note"><strong>Literature is real</strong> — 77 PubMed records, real PMIDs, extracted affinities.
+       <strong>Experiment results are authored test cases</strong>, one per verdict path, chosen to probe the real priors: there is no Foundry API token behind this page.</p>
     <div class="meta" id="meta"></div>
   </header>
 
   <section>
     <div class="section-label">Target literature priors</div>
+    <p class="section-note">Every target resolved against NCBI Gene at snapshot-build time — "HER2" is a display
+       name, not an identifier. The expected KD range is the log-space interquartile core of extracted affinities,
+       not the full envelope, which on real literature spans orders of magnitude legitimately.</p>
     <div class="gauge-grid" id="gauge-grid"></div>
   </section>
 
   <section>
     <div class="section-label">Experiment run log</div>
+    <p class="section-note">Results below are <strong>authored test cases</strong> — one per verdict path, with KD values
+       chosen against the real published priors. The verdicts, ranges and citations are computed; the inputs are not
+       lab data.</p>
     <div id="exp-log"></div>
   </section>
 
@@ -387,7 +409,12 @@ function renderGauges() {
       <div class="card-detail">
         <div><span class="k">confidence</span> ${(t.calibrated_confidence*100).toFixed(0)}% <span class="evidence-tag evidence-${t.evidence_level}">${t.evidence_level}</span></div>
         <div><span class="k">expected KD range</span> ${fmtM(t.expected_kd_low_m)} – ${fmtM(t.expected_kd_high_m)}</div>
-        <div><span class="k">known binders</span> ${t.known_binders.length ? t.known_binders.join(', ') : 'none'}</div>
+        <!-- "known binders" overstated what extraction establishes. A HER2 query
+             genuinely returns papers discussing cetuximab, which is anti-EGFR -
+             the pipeline links a name to the abstract it appeared in, not to the
+             protein that abstract was about. A domain reader spots that in
+             seconds, so the label says what was actually measured. -->
+        <div><span class="k">binders named in this literature</span> ${t.known_binders.length ? t.known_binders.join(', ') : 'none'}</div>
         ${t.ncbi ? `<div class="ncbi"><span class="k">pinned to</span>
           <a href="${t.ncbi.protein_url}" target="_blank" rel="noopener">${t.ncbi.refseq_protein}</a>
           · ${t.ncbi.protein_length} aa ·
