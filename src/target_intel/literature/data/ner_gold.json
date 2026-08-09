@@ -1,0 +1,224 @@
+{
+  "_about": {
+    "purpose": "Hand-labeled exact-span gold standard for the entity extractor. Scored by literature/scorer.py with the same exact-span rule the thesis pipeline uses.",
+    "labeling_rule": "Spans are labeled for what a CORRECT extractor should find, independent of what the bundled gazetteer actually finds. Several named binders below are deliberately absent from the gazetteer, so the measured recall reflects a real limitation rather than a circular self-check.",
+    "splits": {
+      "demo_corpus": "Sentences from the bundled offline corpus. The gazetteer was written against this text, so treat these scores as an in-domain ceiling, not evidence of generalization.",
+      "heldout_realistic": "Held-out sentences written in the notation and phrasing of real published abstracts, using binders and constructions the gazetteer was NOT built around. This is the honest generalization estimate."
+    },
+    "types_evaluated": ["BINDER_NAMED", "BINDER_GENERIC", "EPITOPE", "AFFINITY_VALUE"],
+    "types_not_evaluated": ["SPARSITY_SIGNAL — a soft discourse cue, not a span two annotators would agree on; reported as not evaluated rather than scored as zero."],
+    "offsets": "Computed at load time from (text, n) where n is the 0-based occurrence index. The loader asserts the recovered substring matches, so a typo fails loudly instead of silently shifting every span."
+  },
+
+  "sentences": [
+    {
+      "id": "demo-01",
+      "split": "demo_corpus",
+      "text": "Trastuzumab is a humanized monoclonal antibody that binds domain IV of the HER2/ERBB2 extracellular region with sub-nanomolar affinity, reported around 0.1 to 5 nanomolar depending on assay format.",
+      "entities": [
+        {"text": "Trastuzumab", "type": "BINDER_NAMED"},
+        {"text": "antibody", "type": "BINDER_GENERIC"},
+        {"text": "domain IV", "type": "EPITOPE"},
+        {"text": "sub-nanomolar", "type": "AFFINITY_VALUE"},
+        {"text": "0.1 to 5 nanomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "demo-02",
+      "split": "demo_corpus",
+      "text": "Pertuzumab binds a distinct epitope in domain II and is often used in combination for complementary blockade of HER2 dimerization.",
+      "entities": [
+        {"text": "Pertuzumab", "type": "BINDER_NAMED"},
+        {"text": "domain II", "type": "EPITOPE"}
+      ]
+    },
+    {
+      "id": "demo-03",
+      "split": "demo_corpus",
+      "text": "Several single-domain (VHH) binders selected against HER2 domain IV have been reported with affinities in the low nanomolar to sub-nanomolar range.",
+      "entities": [
+        {"text": "VHH", "type": "BINDER_GENERIC"},
+        {"text": "domain IV", "type": "EPITOPE"},
+        {"text": "low nanomolar", "type": "AFFINITY_VALUE"},
+        {"text": "sub-nanomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "demo-04",
+      "split": "demo_corpus",
+      "text": "Cetuximab binds domain III of the EGFR extracellular region and blocks ligand binding, with reported affinities typically in the 1 to 10 nanomolar range across BLI and SPR studies.",
+      "entities": [
+        {"text": "Cetuximab", "type": "BINDER_NAMED"},
+        {"text": "domain III", "type": "EPITOPE"},
+        {"text": "1 to 10 nanomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "demo-05",
+      "split": "demo_corpus",
+      "text": "Necitumumab and panitumumab bind overlapping or adjacent epitopes with comparable affinity.",
+      "entities": [
+        {"text": "Necitumumab", "type": "BINDER_NAMED"},
+        {"text": "panitumumab", "type": "BINDER_NAMED"}
+      ]
+    },
+    {
+      "id": "demo-06",
+      "split": "demo_corpus",
+      "text": "Nanobody and scFv binders selected against EGFR domain III typically fall in the low nanomolar range; affinities below 100 picomolar are uncommon in the published literature for this epitope.",
+      "entities": [
+        {"text": "Nanobody", "type": "BINDER_GENERIC"},
+        {"text": "scFv", "type": "BINDER_GENERIC"},
+        {"text": "domain III", "type": "EPITOPE"},
+        {"text": "low nanomolar", "type": "AFFINITY_VALUE"},
+        {"text": "below 100 picomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "demo-07",
+      "split": "demo_corpus",
+      "text": "Atezolizumab and durvalumab bind the IgV domain of PD-L1 and block the PD-1/PD-L1 interaction, with reported affinities in the sub-nanomolar to low nanomolar range in most published assays.",
+      "entities": [
+        {"text": "Atezolizumab", "type": "BINDER_NAMED"},
+        {"text": "durvalumab", "type": "BINDER_NAMED"},
+        {"text": "IgV domain", "type": "EPITOPE"},
+        {"text": "sub-nanomolar", "type": "AFFINITY_VALUE"},
+        {"text": "low nanomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "demo-08",
+      "split": "demo_corpus",
+      "text": "Engineered small binder scaffolds against the PD-L1 IgV domain have been reported with affinities from roughly 0.5 to 20 nanomolar.",
+      "entities": [
+        {"text": "Engineered small binder", "type": "BINDER_GENERIC"},
+        {"text": "IgV domain", "type": "EPITOPE"},
+        {"text": "0.5 to 20 nanomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "demo-09",
+      "split": "demo_corpus",
+      "text": "Certain full-length IgG antibodies against the target's extracellular domain bind with affinities reported around 10 to 50 nanomolar in several validated studies.",
+      "entities": [
+        {"text": "antibodies", "type": "BINDER_GENERIC"},
+        {"text": "10 to 50 nanomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "demo-10",
+      "split": "demo_corpus",
+      "text": "Engineered nanobody and VHH binders against the same extracellular domain have been reported with sub-nanomolar affinity, in some cases approaching 100 picomolar.",
+      "entities": [
+        {"text": "nanobody", "type": "BINDER_GENERIC"},
+        {"text": "VHH", "type": "BINDER_GENERIC"},
+        {"text": "sub-nanomolar", "type": "AFFINITY_VALUE"},
+        {"text": "100 picomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+
+    {
+      "id": "held-01",
+      "split": "heldout_realistic",
+      "text": "The lead clone bound recombinant antigen with KD = 2.3 nM by surface plasmon resonance, with a 1:1 Langmuir fit.",
+      "entities": [
+        {"text": "2.3 nM", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "held-02",
+      "split": "heldout_realistic",
+      "text": "Rituximab, a chimeric anti-CD20 antibody, engages a large extracellular loop epitope and was used here as the reference binder.",
+      "entities": [
+        {"text": "Rituximab", "type": "BINDER_NAMED"},
+        {"text": "antibody", "type": "BINDER_GENERIC"}
+      ]
+    },
+    {
+      "id": "held-03",
+      "split": "heldout_realistic",
+      "text": "Affinity maturation improved the scFv from 151 nM to 4.6 nM, a roughly 33-fold gain.",
+      "entities": [
+        {"text": "scFv", "type": "BINDER_GENERIC"},
+        {"text": "151 nM", "type": "AFFINITY_VALUE"},
+        {"text": "4.6 nM", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "held-04",
+      "split": "heldout_realistic",
+      "text": "Bevacizumab neutralises its ligand rather than a receptor ectodomain, and is therefore not a suitable comparator for domain III binders.",
+      "entities": [
+        {"text": "Bevacizumab", "type": "BINDER_NAMED"},
+        {"text": "domain III", "type": "EPITOPE"}
+      ]
+    },
+    {
+      "id": "held-05",
+      "split": "heldout_realistic",
+      "text": "Two nanobodies bound with dissociation constants of 0.39 nM and 3.89 nM respectively.",
+      "entities": [
+        {"text": "nanobodies", "type": "BINDER_GENERIC"},
+        {"text": "0.39 nM", "type": "AFFINITY_VALUE"},
+        {"text": "3.89 nM", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "held-06",
+      "split": "heldout_realistic",
+      "text": "Obinutuzumab is a glycoengineered type II antibody that binds a partially overlapping epitope.",
+      "entities": [
+        {"text": "Obinutuzumab", "type": "BINDER_NAMED"},
+        {"text": "antibody", "type": "BINDER_GENERIC"}
+      ]
+    },
+    {
+      "id": "held-07",
+      "split": "heldout_realistic",
+      "text": "Binding was weak, with an apparent KD of 1.2 µM under the conditions tested.",
+      "entities": [
+        {"text": "1.2 µM", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "held-08",
+      "split": "heldout_realistic",
+      "text": "Gold nanoparticles of 0.8 nm diameter were conjugated to the binder prior to imaging.",
+      "entities": []
+    },
+    {
+      "id": "held-09",
+      "split": "heldout_realistic",
+      "text": "Samples were eluted in 2 M NaCl and dialysed against 10 mM Tris before analysis.",
+      "entities": []
+    },
+    {
+      "id": "held-10",
+      "split": "heldout_realistic",
+      "text": "An affibody scaffold selected against domain I showed 15 nM affinity, weaker than the domain III binders.",
+      "entities": [
+        {"text": "domain I", "type": "EPITOPE"},
+        {"text": "15 nM", "type": "AFFINITY_VALUE"},
+        {"text": "domain III", "type": "EPITOPE"}
+      ]
+    },
+    {
+      "id": "held-11",
+      "split": "heldout_realistic",
+      "text": "The VHH retained sub-picomolar apparent affinity in a bivalent format, consistent with avidity rather than true monovalent binding.",
+      "entities": [
+        {"text": "VHH", "type": "BINDER_GENERIC"},
+        {"text": "sub-picomolar", "type": "AFFINITY_VALUE"}
+      ]
+    },
+    {
+      "id": "held-12",
+      "split": "heldout_realistic",
+      "text": "Reported values ranged from 0.1-5 nM across three independent laboratories using biolayer interferometry.",
+      "entities": [
+        {"text": "0.1-5 nM", "type": "AFFINITY_VALUE"}
+      ]
+    }
+  ]
+}
