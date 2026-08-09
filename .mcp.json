@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "target-intel": {
+      "command": "bash",
+      "args": ["-c", "exec \"${CLAUDE_PLUGIN_ROOT:-$PWD}/scripts/mcp_server.sh\""],
+      "env": {
+        "MOCK": "1",
+        "LITERATURE_MODE": "snapshot"
+      }
+    }
+  }
+}

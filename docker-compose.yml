@@ -1,0 +1,60 @@
+# Deployable stack: the MCP server plus a Neo4j instance for the
+# provenance-tagged literature graph.
+#
+#   docker compose up -d
+#   curl localhost:8002/health
+#   python scripts/neo4j/load_graph.py --all
+#
+# Both services are health-checked, and the loader waits on Neo4j being
+# healthy rather than merely started - a Neo4j container accepts TCP
+# connections well before Bolt is ready to answer, so "started" is not a
+# usable readiness signal and depends_on alone would race.
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: adaptyv-target-intel:latest
+    container_name: target-intel-mcp
+    ports:
+      - "8002:8002"
+    environment:
+      MCP_TRANSPORT: streamable-http
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: "8002"
+      MOCK: "1"
+      LITERATURE_MODE: snapshot
+      # Uncomment for real Foundry + real PubMed. Note that live literature
+      # mode reports confidence as uncalibrated by design.
+      # MOCK: "0"
+      # FOUNDRY_API_TOKEN: ${FOUNDRY_API_TOKEN}
+      # LITERATURE_MODE: live
+      # NCBI_EMAIL: ${NCBI_EMAIL}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  neo4j:
+    image: neo4j:5-community
+    container_name: target-intel-neo4j
+    ports:
+      - "7474:7474"   # browser
+      - "7687:7687"   # bolt
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-target-intel-dev}
+      NEO4J_server_memory_pagecache_size: 512M
+      NEO4J_server_memory_heap_max__size: 1G
+    volumes:
+      - neo4j_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p ${NEO4J_PASSWORD:-target-intel-dev} 'RETURN 1' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  neo4j_data:

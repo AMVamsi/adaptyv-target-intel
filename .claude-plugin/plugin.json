@@ -1,0 +1,19 @@
+{
+  "name": "literature-grounding",
+  "displayName": "Literature Grounding",
+  "version": "0.1.0",
+  "description": "Checks whether a binding/affinity result is scientifically expected, novel, or implausible given what is published about the target - with citations, an evidence-agreement level, and a calibrated confidence that declares when it is not calibrated.",
+  "author": {
+    "name": "Mohan Adluru"
+  },
+  "license": "MIT",
+  "keywords": [
+    "protein-design",
+    "binding",
+    "affinity",
+    "literature",
+    "calibration",
+    "provenance",
+    "triage"
+  ]
+}

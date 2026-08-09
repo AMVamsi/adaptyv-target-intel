@@ -1,0 +1,17 @@
+{
+  "name": "adaptyv-target-intel",
+  "owner": {
+    "name": "Mohan Adluru"
+  },
+  "plugins": [
+    {
+      "name": "literature-grounding",
+      "source": "./",
+      "description": "Literature-grounded plausibility checks for binding and affinity results: is this KD expected, novel, or implausible for this target - and do the sources even agree with each other?",
+      "version": "0.1.0",
+      "author": {
+        "name": "Mohan Adluru"
+      }
+    }
+  ]
+}
