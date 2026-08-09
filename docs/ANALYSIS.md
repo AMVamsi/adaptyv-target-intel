@@ -220,7 +220,7 @@ example (`ABS-001-042`, anti-HER2 VHH screen).
 partner, and the reuse here was checked against that before publishing: what
 transfers is engineering this project re-implements for a different
 domain — an exact-span scorer, a health payload, a graph loader with a
-provenance gate, and temperature scaling — under MIT, with in-file comments
+provenance gate, and temperature scaling — with in-file comments
 naming the original file. No model weights, no training data, no corpora, and
 no partner data of any kind.
 
