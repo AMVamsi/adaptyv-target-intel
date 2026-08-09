@@ -17,7 +17,7 @@ Ships as a Claude Code plugin + 7-tool MCP server + CLI + dashboard.
 
 ```bash
 pip install -e ".[dev]"
-pytest                                       # 159 tests, offline, ~6s
+pytest                                       # 159 tests, offline, ~10s
 target-intel interpret <experiment-id>       # the core output
 target-intel score                           # exact-span entity F1 vs. gold
 target-intel eval                            # calibration + regression guards

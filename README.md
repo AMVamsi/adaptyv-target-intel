@@ -1,6 +1,6 @@
 # Literature Grounding — `target-intel`
 
-[![CI](https://github.com/amvamsi/adaptyv-target-intel/actions/workflows/ci.yml/badge.svg)](https://github.com/amvamsi/adaptyv-target-intel/actions/workflows/ci.yml)
+[![CI](https://github.com/AMVamsi/adaptyv-target-intel/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/AMVamsi/adaptyv-target-intel/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-blue?logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![MCP 1.x & 2.x](https://img.shields.io/badge/MCP-1.x%20%7C%202.x-6f42c1)](https://modelcontextprotocol.io/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -85,7 +85,7 @@ Nothing to configure — the real-literature snapshot ships in the repo, so it
 runs end-to-end with no API key and no network.
 
 ```bash
-git clone https://github.com/amvamsi/adaptyv-target-intel && cd adaptyv-target-intel
+git clone https://github.com/AMVamsi/adaptyv-target-intel && cd adaptyv-target-intel
 pip install -e ".[dev]"
 target-intel interpret 019d4a2b-3c5e-7890-a001-000000000001
 ```
@@ -94,7 +94,7 @@ target-intel interpret 019d4a2b-3c5e-7890-a001-000000000001
 this repo is both a marketplace and a plugin):
 
 ```
-/plugin marketplace add amvamsi/adaptyv-target-intel
+/plugin marketplace add AMVamsi/adaptyv-target-intel
 /plugin install literature-grounding@adaptyv-target-intel
 ```
 
@@ -417,7 +417,7 @@ The design rule throughout: **a number that can't be justified says so.**
 ## Tests
 
 ```bash
-pytest                                   # 159 tests, no network, no API key, ~6s
+pytest                                   # 159 tests, no network, no API key, ~10s
 ruff check src tests scripts evals       # clean; runs in CI ahead of the tests
 ```
 
@@ -465,12 +465,12 @@ guard threshold.
 
 ## Live mode
 
-Both live paths are implemented and were **run against the real services**,
-not just written:
+Two live paths exist. **One has been run against the real service; one has
+not**, and they're labelled accordingly rather than described together:
 
 ```bash
-target-intel context comp-her2-human --live-literature   # real PubMed
-FOUNDRY_API_TOKEN=... target-intel list-targets --live   # real Foundry API
+target-intel context comp-her2-human --live-literature   # real PubMed — run, verified
+FOUNDRY_API_TOKEN=... target-intel list-targets --live   # real Foundry API — never run, no token
 ```
 
 Live PubMed retrieval was verified end-to-end: for HER2 it returns 20 real

@@ -15,7 +15,10 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    # `dev` is here as well as `main` so the suite has actually run before a
+    # merge, rather than the first run being the one that decides whether the
+    # README's badge is green.
+    branches: [main, dev]
   pull_request:
   workflow_dispatch:
 

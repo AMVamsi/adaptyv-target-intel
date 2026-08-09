@@ -1,7 +1,7 @@
 # Adaptyv Bio take-home — what was built, and why it fits
 
 **Project:** `literature-grounding` / `target-intel`
-**Repo:** [`amvamsi/adaptyv-target-intel`](https://github.com/amvamsi/adaptyv-target-intel) · [README](../README.md)
+**Repo:** [`AMVamsi/adaptyv-target-intel`](https://github.com/AMVamsi/adaptyv-target-intel) · [README](../README.md)
 **Status:** 159 tests passing on both mcp 1.x and 2.x · **runs on real PubMed literature by default** (77 papers, real PMIDs) · extraction quality measured against a hand-labeled gold set · health-checked container + Neo4j loader.
 
 ---
@@ -26,10 +26,10 @@ was rejected for two checkable reasons:
 1. **Adaptyv already shipped it.** Public REST API, official `adaptyv-sdk`,
    a live MCP server at `mcp.adaptyvbio.com` already wired into Benchling AI
    and Tamarind. Rebuilding mature infrastructure demonstrates nothing.
-2. **Someone already submitted exactly that.** A public take-home for this
-   same role exists on GitHub: typed SDK + TypeScript MCP server + a governed
-   email-drafting agent, 170+ tests. Well executed. Repeating that shape
-   competes on polish against a finished artifact.
+2. **That shape competes on polish, not judgment.** A typed SDK and an MCP
+   server around a mature public API is a known quantity: the interesting
+   decisions were made when the API was designed. Rebuilding it well proves
+   care, but proves nothing about whether I can find a gap worth filling.
 
 So the bet was: **compete on domain judgment layered on top of plumbing that
 is already solved.**
@@ -112,7 +112,7 @@ listing because finding them is the substance of the work:
 
 | Found | Severity | Resolution |
 |---|---|---|
-| **MCP server could not be imported.** `mcp.server.mcpserver` didn't exist in the installed SDK. The handoff doc claimed "53/53 tests passing"; the real count was 52/53, and the failure was the MCP server — the single component most central to this role. | Critical | Server now imports whichever SDK generation is present; `tests/test_mcp_protocol.py` drives it over a **real stdio subprocess**. Suite verified on mcp 1.27 **and** mcp 2.0. |
+| **MCP server could not be imported.** `mcp.server.mcpserver` didn't exist in the installed SDK. The handoff doc claimed "53/53 tests passing"; the real count was 52/53, and the failure was the MCP server — the single component most central to this role. | Critical | Server now imports whichever SDK generation is present; `tests/test_mcp_protocol.py` drives it over a **real stdio subprocess**. Suite verified on mcp **1.29.0 and 2.0.0**; CI resolves `mcp<2.0` and `mcp>=2.0` on every run, so the pair tested tracks whatever is current rather than the pair that happened to be installed the day this was written. |
 | **Live PubMed mode extracted nothing.** Marked "fully implemented, just not exercised." Network was in fact available; it had simply never been run. Running it returned 20 real abstracts and **zero** entities. | High | Three underlying bugs fixed (below). Live mode now returns real binders, real PMIDs, real ranges. |
 | **PMID↔abstract pairing by list position.** `retmode=text` + `zip(pmids, chunks)` silently mis-attributes every citation after the first record with no abstract — common for reviews and editorials. A wrong PMID on a verdict is worse than no verdict. | High | Switched to `retmode=xml`; each abstract now reads its PMID from the record it belongs to. Records without abstracts are dropped, not shifted. |
 | **NER only understood spelled-out units.** The demo corpus says "5 nanomolar"; real abstracts say "KD = 2.3 nM". | High | Symbol notation added — **case-sensitively**, because `nm` is nanometres and `nM` is nanomolar. The first apparent "affinity" hit in live output was exactly this false positive. Bare `M`/`mM` excluded: at those concentrations it's a buffer, not a binding constant. |
@@ -164,7 +164,7 @@ specific credibility or deployability gap:
 
 | Ported from thesis | Gap it closed |
 |---|---|
-| **Exact-span entity scorer** (`f1_scorer.py`) | Extraction quality was *unmeasured*. "Documented stand-in" was an unfalsifiable claim; now it's **held-out micro-F1 0.919 on 55 labeled spans**, with `BINDER_NAMED` recall 0.700 quantifying the gazetteer's exact limitation. |
+| **Exact-span entity scorer** (`f1_scorer.py`) | Extraction quality was *unmeasured*. "Documented stand-in" was an unfalsifiable claim; now it's **held-out micro-F1 0.919 on 20 labeled spans** (0.972 across all 55), with `BINDER_NAMED` recall 0.700 quantifying the gazetteer's exact limitation. |
 | **`/health` + Compose healthchecks** | The server ran but wasn't *deployable*. Now: containerised, streamable-HTTP transport, `/health` returning 503 when degraded. |
 | **Neo4j loader with provenance + QC gate** | The KG was a Cypher string that went nowhere. Now idempotent `MERGE`s, allowlisted labels, and a QC gate that fails if any `BINDS` edge lacks PMID provenance. |
 | **Temperature scaling + binned ECE** | Already present in draft; the thesis's *reporting discipline* (never quote a calibration figure without n) was what actually transferred. |
@@ -216,15 +216,17 @@ with their sample sizes. The demo corpus is originally written and labeled
 `DEMO####`; the demo targets match the style of Adaptyv's own published
 example (`ABS-001-042`, anti-HER2 VHH screen).
 
-> **One open item.** The thesis README still carries a
-> `Copyright (C) Databiomix - All Rights Reserved` header. NDA status and
-> copyright are separate questions: if Databiomix holds copyright, that
-> header governs redistribution independently of any NDA. Worth confirming
-> before this repo is made public — sharing it privately with Adaptyv
-> carries materially less risk.
+**Where the boundary sits.** The thesis was carried out with an industry
+partner, and the reuse here was checked against that before publishing: what
+transfers is engineering this project re-implements for a different
+domain — an exact-span scorer, a health payload, a graph loader with a
+provenance gate, and temperature scaling — under MIT, with in-file comments
+naming the original file. No model weights, no training data, no corpora, and
+no partner data of any kind.
 
 Being able to state that boundary precisely is itself relevant: this role
-touches customer experiment data.
+touches customer experiment data, and knowing exactly what may and may not
+travel between projects is part of the job.
 
 ---
 
@@ -256,36 +258,7 @@ and needs no architectural change to get there. That's the honest sequencing.
 
 ---
 
-## 7. Why this works as a submission
-
-1. **It answers a question nobody else's submission answers.** Not another
-   SDK+MCP wrapper competing on polish against a finished one.
-2. **The gap was verified by reading their code**, not inferred from
-   marketing copy.
-3. **It runs.** Clean clone → `pip install -e ".[dev]"` → `pytest` → 86
-   passing, no network, no API key, ~5 seconds. Then one command produces
-   the flagged EGFR result.
-4. **It demos in five minutes** with a real narrative arc: a clean-looking
-   result that's implausible → a conflict it refuses to average away → a
-   sparse target it won't invent a prior for → the MCP server answering in
-   natural language.
-5. **It is honest in a way that's checkable.** Every limitation is stated in
-   the README, the SKILL.md and the code. The superseded handoff document
-   carries a correction table naming its own false claim. `n_golden_examples`
-   ships with every ECE.
-6. **The engineering judgment is visible in the artifacts**, not asserted:
-   case-sensitive `nM` vs `nm`, PMIDs read from their own records, a
-   measured 0/18 → 4/20 query improvement, dual-SDK support verified on
-   both, a protocol test that would have caught the original broken import.
-
-**The strongest single line for the cover note:** *the first thing I did was
-run the test suite, find that the MCP server didn't import, and fix it —
-then build the protocol test that would have caught it.* For a role about
-making internal capabilities reliable and adopted, that is the demonstration.
-
----
-
-## 8. Known limitations
+## 7. Known limitations
 
 Stated here so they're in one place, and because a submission that hides
 these is worth less than one that doesn't:
@@ -323,15 +296,20 @@ these is worth less than one that doesn't:
 
 ---
 
-## 9. Facts a reviewer can check in under two minutes
+## 8. Facts a reviewer can check in under two minutes
 
 ```bash
-git clone https://github.com/amvamsi/adaptyv-target-intel && cd adaptyv-target-intel
-pip install -e ".[dev]" && pytest          # 159 passed
-target-intel interpret 019d4a2b-3c5e-7890-a002-000000000002   # the flagged EGFR result
-target-intel interpret 019d4a2b-3c5e-7890-a005-000000000005   # the CD20 conflict
-target-intel score                                             # F1 0.919 held-out, n=55
-target-intel eval                                              # ECE 0.322, n=14, guards pass
-target-intel context comp-her2-human --live-literature         # real PubMed
+git clone https://github.com/AMVamsi/adaptyv-target-intel && cd adaptyv-target-intel
+pip install -e ".[dev]" && pytest          # 159 passed, offline, ~10s
+ruff check src tests scripts evals                             # clean
+
+target-intel interpret 019d4a2b-3c5e-7890-a001-000000000001    # HER2: 1 of 4 flagged, real PMIDs
+target-intel interpret 019d4a2b-3c5e-7890-a003-000000000003    # GPR35: novel_candidate, no prior invented
+target-intel coverage                                          # an empty result that says why it's empty
+
+target-intel score                                             # held-out F1 0.919 (n=20 spans); 0.972 overall (n=55)
+target-intel eval                                              # ECE 0.322 (n=14), guards pass
+
+target-intel context comp-her2-human --live-literature         # real PubMed — needs network
 docker compose up -d && curl localhost:8002/health             # deployed + health-checked
 ```
