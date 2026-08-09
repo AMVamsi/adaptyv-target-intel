@@ -1,0 +1,47 @@
+[
+  {
+    "target_id": "comp-her2-human",
+    "name": "HER2 / ERBB2",
+    "vendor": "adaptyv",
+    "selfservice_only": true,
+    "has_calibrated_price": true,
+    "uniprot_hint": "P04626",
+    "gene_symbol": "ERBB2"
+  },
+  {
+    "target_id": "comp-egfr-human",
+    "name": "EGFR",
+    "vendor": "adaptyv",
+    "selfservice_only": true,
+    "has_calibrated_price": true,
+    "uniprot_hint": "P00533",
+    "gene_symbol": "EGFR"
+  },
+  {
+    "target_id": "comp-pdl1-human",
+    "name": "PD-L1 / CD274",
+    "vendor": "adaptyv",
+    "selfservice_only": true,
+    "has_calibrated_price": true,
+    "uniprot_hint": "Q9NZQ7",
+    "gene_symbol": "CD274"
+  },
+  {
+    "target_id": "comp-gpr35-human",
+    "name": "GPR35",
+    "vendor": "partner",
+    "selfservice_only": false,
+    "has_calibrated_price": false,
+    "uniprot_hint": "Q9HC97",
+    "gene_symbol": "GPR35"
+  },
+  {
+    "target_id": "comp-cd20-human",
+    "name": "CD20 / MS4A1",
+    "vendor": "adaptyv",
+    "selfservice_only": true,
+    "has_calibrated_price": true,
+    "uniprot_hint": "P11836",
+    "gene_symbol": "MS4A1"
+  }
+]
