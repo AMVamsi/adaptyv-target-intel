@@ -18,18 +18,37 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
+has_deps() { PYTHONPATH="$ROOT/src" "$1" -c "import mcp, pydantic" >/dev/null 2>&1; }
+
 pick_python() {
-  # A venv inside the repo is the most specific answer available, and the
-  # one the README's install instructions produce.
-  for venv in "$ROOT/.venv" "$ROOT/venv"; do
-    [ -x "$venv/bin/python" ] && { echo "$venv/bin/python"; return; }
+  # Ordered most-specific first, and each candidate is only accepted if it can
+  # actually import the dependencies. Picking an interpreter that merely
+  # exists is how the original `"command": "python"` bug happened: it
+  # resolved, then died on import. Any environment manager that puts a
+  # `bin/python` somewhere findable works here - the check is behavioural,
+  # not a list of blessed layouts.
+  local candidates=(
+    "$ROOT/.venv/bin/python"          # what the README's install produces
+    "$ROOT/venv/bin/python"
+    "$ROOT/.v/bin/python"
+    "${VIRTUAL_ENV:-/nonexistent}/bin/python"
+    "${CONDA_PREFIX:-/nonexistent}/bin/python"
+  )
+  # Any other virtualenv sitting in the repo root, whatever it's called.
+  for d in "$ROOT"/*/bin/python; do candidates+=("$d"); done
+  candidates+=("$(command -v python3 2>/dev/null || true)")
+  candidates+=("$(command -v python  2>/dev/null || true)")
+
+  for py in "${candidates[@]}"; do
+    [ -n "$py" ] && [ -x "$py" ] && has_deps "$py" && { echo "$py"; return; }
   done
 
-  # Otherwise trust the caller's environment - an activated venv exports
-  # VIRTUAL_ENV, and `python3`/`python` follow PATH.
-  [ -n "${VIRTUAL_ENV:-}" ] && [ -x "$VIRTUAL_ENV/bin/python" ] && { echo "$VIRTUAL_ENV/bin/python"; return; }
-  command -v python3 2>/dev/null && return
-  command -v python  2>/dev/null && return
+  # Nothing had the dependencies. Fall back to the most plausible interpreter
+  # so the error below can name it and print an install line that will work.
+  for py in "$ROOT/.venv/bin/python" "${VIRTUAL_ENV:-/nonexistent}/bin/python" \
+            "$(command -v python3 2>/dev/null || true)" "$(command -v python 2>/dev/null || true)"; do
+    [ -n "$py" ] && [ -x "$py" ] && { echo "$py"; return; }
+  done
 }
 
 # `|| true` matters: pick_python returns non-zero when it finds nothing, and
