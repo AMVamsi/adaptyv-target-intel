@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "target-intel"
+version = "0.1.0"
+description = "Literature-grounded result interpretation layer for Adaptyv Bio's Foundry API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "pydantic>=2.0",
+    "httpx>=0.27",
+    # Deliberately unpinned across the 1.x/2.x boundary. The server class was
+    # renamed (FastMCP -> MCPServer) but not redesigned, so mcp_server/server.py
+    # imports whichever is present. The suite is run against both.
+    "mcp>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-asyncio>=0.23", "ruff>=0.6"]
+# Optional so the core install stays light: the graph export works without a
+# driver, and only writing it to a live database needs one.
+neo4j = ["neo4j>=5.0"]
+
+[project.scripts]
+target-intel = "target_intel.cli:main"
+target-intel-mcp = "target_intel.mcp_server.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+target_intel = ["sdk/fixtures/*.json", "literature/data/*.json", "dashboard/*.html"]
+
+# Self-contained test config. `pythonpath = ["src"]` means a plain `pytest`
+# works straight from a clone with no `pip install -e .` and no PYTHONPATH
+# export. Without this the suite silently inherits its config from whatever
+# parent directory happens to contain a pyproject.toml, which is how the
+# asyncio tests would appear to pass here and fail on a reviewer's machine.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+addopts = "-q"
+
+# Lint config matches the code that already exists rather than the other way
+# round: the 88-column default would have rewritten ~180 lines of working,
+# reviewed code for no behavioural gain, and a reformatting commit that large
+# buries the commits that actually matter.
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
