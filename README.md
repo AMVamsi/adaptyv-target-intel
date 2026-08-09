@@ -3,7 +3,7 @@
 [![CI](https://github.com/AMVamsi/adaptyv-target-intel/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/AMVamsi/adaptyv-target-intel/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-blue?logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![MCP 1.x & 2.x](https://img.shields.io/badge/MCP-1.x%20%7C%202.x-6f42c1)](https://modelcontextprotocol.io/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![License: proprietary](https://img.shields.io/badge/license-proprietary-lightgrey)](LICENSE)
 
 > Built as a take-home for Adaptyv Bio's AI Engineer role. Runs on real
 > PubMed literature, installs as a Claude Code plugin, and ships with the
@@ -189,6 +189,12 @@ network requests:
 python -m target_intel.dashboard.generate_report
 python -m target_intel.dashboard.build_dashboard   # -> dashboard.html
 ```
+
+**Or just look at it: [amvamsi.github.io/adaptyv-target-intel](https://amvamsi.github.io/adaptyv-target-intel/)** —
+the same file, published from `docs/index.html`. A test fails if that
+published copy drifts from what the code currently produces, because a
+dashboard showing output the repo no longer generates is worse than no
+dashboard at all.
 
 ![Portfolio console](docs/dashboard.png)
 
@@ -530,4 +536,9 @@ sample sizes, above. No model weights or datasets are copied.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+**Proprietary — © 2026 Mohan Vamsi Adluru. All rights reserved.**
+
+Published to be read and evaluated, not reused. The [LICENSE](LICENSE) grants
+anyone the right to clone, run and study it for evaluation — Adaptyv Bio
+explicitly and without needing to ask — and reserves everything else. It's
+temporary: this moves to MIT once the evaluation it was written for is over.

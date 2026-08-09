@@ -15,7 +15,7 @@ description: >
   this number scientifically expected, novel, or implausible given what's
   published about this target, and do the sources even agree with each
   other?
-license: MIT
+license: Proprietary
 category: evaluation
 tags: [literature, calibration, affinity, provenance, triage, evidence-level, coverage]
 ---
