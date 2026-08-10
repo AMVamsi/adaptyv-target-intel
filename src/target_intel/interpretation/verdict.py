@@ -253,11 +253,10 @@ def _interpret(result: ResultRecord, prior: ExpectedAffinityPrior) -> Verdict:
         confidence=prior.calibrated_confidence,
         rationale=(
             f"{result.sequence_name}: measured KD ({_fmt_m(kd)}) against {result.target_name} "
-            # "known binders" claimed more than extraction establishes: names are
-            # linked to the abstract they appeared in, not to the protein that
+            # "known binders" claimed more than extraction establishes: a name is
+            # linked to the abstract it appeared in, not to the protein that
             # abstract was about, so a HER2 query legitimately surfaces cetuximab
-            # (anti-EGFR). Saying where the name came from costs three words and
-            # stops a domain reader treating a documented limitation as a bug.
+            # (anti-EGFR). The wording says where the name came from.
             f"{placement}; binders named in this target's literature: "
             f"{', '.join(prior.known_binders) or 'none'}). "
             f"Expected result, calibrated confidence {prior.calibrated_confidence:.2f}. No flag."

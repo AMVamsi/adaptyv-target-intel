@@ -41,14 +41,11 @@ class TargetKnowledgeGraph:
     edges: list[KGEdge] = field(default_factory=list)
 
     def to_cypher(self) -> str:
-        # A header, because this text gets read by people and loaded into a
-        # database that will outlive the run. `BINDS` here means "named in
-        # literature retrieved for this target", which is weaker than "binds
-        # this target" - a HER2 query returns papers that also discuss
-        # cetuximab, and extraction links an affinity to the abstract it sat
-        # in, not to the protein that abstract was about. Stating that at the
-        # top costs six lines and stops the graph asserting something the
-        # pipeline never established.
+        # This text gets read by people and loaded into a database that
+        # outlives the run, so the header states what `BINDS` does and does
+        # not mean: "named in literature retrieved for this target", which is
+        # weaker than "binds this target". A HER2 query returns papers that
+        # also discuss cetuximab.
         lines = [
             f"// Target {self.target_hint} - literature-derived, provenance-tagged.",
             "// BINDS = 'this binder was named in literature retrieved for this",
@@ -101,11 +98,8 @@ def build_knowledge_graph(claim: TargetLiteratureClaim, calibrated_confidence: f
     pmids = [p.pmid for p in claim.provenance]
 
     # The same robust core the verdict engine compares against, not the raw
-    # envelope. A graph edge outlives the run that wrote it, so shipping the
-    # envelope here would be worse than using it for a verdict: HER2's
-    # envelope spans 1e-13 to 1.5e-7 M, and "trastuzumab binds with a KD
-    # somewhere in five orders of magnitude" is a triple nobody can act on.
-    # The envelope still travels, under a name that says what it is.
+    # envelope: HER2's envelope spans 1e-13 to 1.5e-7 M, which as a stored
+    # triple says nothing useful. The envelope is kept under `kd_envelope_*`.
     core_low, core_high = typical_range_m(claim.affinity_values_m)
 
     for binder in claim.known_binders:
@@ -119,13 +113,10 @@ def build_knowledge_graph(claim: TargetLiteratureClaim, calibrated_confidence: f
                 "kd_envelope_high_m": claim.affinity_high_m,
                 "confidence": calibrated_confidence,
                 "pmids": pmids,
-                # The KD range and the PMIDs describe *the target's*
-                # literature, not this binder measured on its own. Extraction
-                # links an affinity to the abstract it appeared in, never to
-                # the specific binder named in it - so an edge that silently
-                # implied per-binder attribution would be asserting something
-                # the pipeline never established. Anything consuming this
-                # graph can filter on the property instead of guessing.
+                # The KD range and PMIDs describe *the target's* literature,
+                # not this binder measured on its own - extraction links an
+                # affinity to the abstract it appeared in. Consumers can
+                # filter on this rather than infer it.
                 "attribution": "target_level",
             }))
 
