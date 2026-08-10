@@ -1,0 +1,28 @@
+{
+  "_about": "A real response captured from Adaptyv's Foundry experiment-creation endpoint. Saved verbatim (sequences truncated to two entries for size) so the typed models are tested against the shape the live API actually returns, not the shape they were guessed to return. Note the live API keys this 'id'/'code', not 'experiment_id'/'experiment_code', and nests costs under 'breakdown' - none of which parsed before this fixture existed.",
+  "id": "019d4a2b-3c5e-7890-abcd-1234567890ab",
+  "code": "ABS-001-042",
+  "name": "Anti-HER2 VHH Binding Screen",
+  "experiment_spec": {
+    "experiment_type": "screening",
+    "method": "bli",
+    "target_id": "comp-her2-human",
+    "sequences": {
+      "VHH-01": "EVQLVESGGGLVQPGGSLRLSCAASGFTFSNYAMSWVRQAPGKGLEWVSAISGSGGSTYRFTISRDNSKNTLYLQMNSLRAEDTAVYYCAKDLRGPTYDSSWYRWGQGTLVTVSS",
+      "Ctrl-Tras": "DIQMTQSPSSLSASVGDRVTITCRASQDVNTAVAWYQQKPGKAPKLLIYSASFLYSGVPSRFSGSRSGTDFTLTISSLQPEDFATYYCQQHYTTPPTFGQGTKVEIK"
+    },
+    "n_replicates": 1
+  },
+  "created_at": "2026-08-09T21:22:33.527Z",
+  "experiment_url": "https://foundry.adaptyvbio.com/organization/demo/experiment/019d4a2b-3c5e-7890-abcd-1234567890ab",
+  "status": "draft",
+  "costs": {
+    "type": "estimate",
+    "breakdown": {
+      "pricing_version": "v1_2026-01-20",
+      "assay": {"experiment_type": "screening", "sequence_count": 20, "n_replicates": 1, "unit_price_cents": 9900, "subtotal_cents": 198000},
+      "materials": {"target_id": "comp-her2-human", "target_name": "HER2 / ERBB2", "sequence_count": 20, "price_per_sequence_cents": 1749, "subtotal_cents": 34980},
+      "total_cents": 232980
+    }
+  }
+}

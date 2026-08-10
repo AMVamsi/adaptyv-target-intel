@@ -15,7 +15,7 @@ from __future__ import annotations
 from datetime import datetime
 from enum import Enum
 
-from pydantic import BaseModel, Field
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field, model_validator
 
 
 class ExperimentType(str, Enum):
@@ -76,26 +76,75 @@ class ExperimentSpec(BaseModel):
     method: str | None = None  # e.g. "bli", "spr"
     target_id: str | None = None
     sequences: dict[str, str] = Field(default_factory=dict)
+    n_replicates: int = 1
 
 
 class CostBreakdown(BaseModel):
+    """Normalised cost view.
+
+    The live API nests this as `{type, breakdown: {assay, materials,
+    total_cents}}`; the bundled fixtures were written flat. Both are accepted
+    and end up here, so nothing downstream has to know which transport it
+    came from - see `Experiment._normalise_api_shape`.
+    """
+
     assay_cost_cents: int = 0
     material_cost_cents: int = 0
     total_cents: int = 0
     currency: str = "USD"
+    pricing_version: str | None = None
+    estimate: bool = True  # `costs.type == "estimate"` on the live response
 
 
 class Experiment(BaseModel):
-    experiment_id: str
-    experiment_code: str | None = None
+    """One Foundry experiment.
+
+    `id`/`code` are accepted as aliases for `experiment_id`/`experiment_code`,
+    which is what the live API returns. A captured response is saved at
+    `tests/data/foundry_experiment_response.json`; it did not parse before
+    these aliases existed, so the mock transport was the only one the models
+    had ever been checked against.
+    """
+
+    model_config = ConfigDict(populate_by_name=True)
+
+    experiment_id: str = Field(validation_alias=AliasChoices("experiment_id", "id"))
+    experiment_code: str | None = Field(default=None, validation_alias=AliasChoices("experiment_code", "code"))
     name: str
     status: ExperimentStatus
     results_status: ResultsStatus = ResultsStatus.NONE
     experiment_spec: ExperimentSpec
     costs: CostBreakdown | None = None
+    experiment_url: str | None = None
     webhook_url: str | None = None
     created_at: datetime | None = None
     updated_at: datetime | None = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def _normalise_api_shape(cls, data):
+        """Flatten the live API's nested cost object into `CostBreakdown`.
+
+        Done before validation rather than with a union type so that every
+        consumer - dashboard, CLI, Neo4j loader - sees one shape regardless
+        of transport. A union would push the branch onto every caller.
+        """
+        if not isinstance(data, dict):
+            return data
+        costs = data.get("costs")
+        if isinstance(costs, dict) and "breakdown" in costs:
+            breakdown = costs.get("breakdown") or {}
+            data = {
+                **data,
+                "costs": {
+                    "assay_cost_cents": (breakdown.get("assay") or {}).get("subtotal_cents", 0),
+                    "material_cost_cents": (breakdown.get("materials") or {}).get("subtotal_cents", 0),
+                    "total_cents": breakdown.get("total_cents", 0),
+                    "pricing_version": breakdown.get("pricing_version"),
+                    "estimate": costs.get("type") == "estimate",
+                },
+            }
+        return data
 
 
 class SequenceRecord(BaseModel):
