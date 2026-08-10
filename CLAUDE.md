@@ -17,7 +17,7 @@ Ships as a Claude Code plugin + 7-tool MCP server + CLI + dashboard.
 
 ```bash
 pip install -e ".[dev]"
-pytest                                       # 159 tests, offline, ~10s
+pytest                                       # 164 tests, offline, ~10s
 target-intel interpret <experiment-id>       # the core output
 target-intel score                           # exact-span entity F1 vs. gold
 target-intel eval                            # calibration + regression guards
@@ -128,8 +128,11 @@ target's literature", because a HER2 query genuinely returns cetuximab.
 
 State these plainly; don't quietly imply otherwise.
 
-- **Foundry live API** — written against the documented public API, never
-  run. No token.
+- **Foundry live API** — never run against a live token. The *models* are
+  no longer unverified though: `tests/data/foundry_experiment_response.json`
+  is a real captured response, and it did **not** parse until `id`/`code`
+  aliases and the nested-`costs` normaliser were added. Transport, auth and
+  pagination remain untested against the real service.
 - **Neo4j live load** — logic unit-tested with a fake session, `--dry-run`
   emits exact Cypher, but nothing has been written to a real database
   (Docker wouldn't start in the dev environment).
@@ -145,7 +148,7 @@ State these plainly; don't quietly imply otherwise.
 
 | Metric | Value | Command |
 |---|---|---|
-| Tests | 159 | `pytest` |
+| Tests | 164 | `pytest` |
 | Entity F1, held-out | 0.919 (n=20 spans) | `target-intel score` |
 | Entity F1, in-domain | 1.000 (n=35) — **a ceiling, not a result** | `target-intel score` |
 | `BINDER_NAMED` recall | 0.700 — the gazetteer's real limit | `target-intel score` |

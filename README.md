@@ -423,7 +423,7 @@ The design rule throughout: **a number that can't be justified says so.**
 ## Tests
 
 ```bash
-pytest                                   # 159 tests, no network, no API key, ~10s
+pytest                                   # 164 tests, no network, no API key, ~10s
 ruff check src tests scripts evals       # clean; runs in CI ahead of the tests
 ```
 
@@ -493,9 +493,17 @@ the code:
    "KD = 2.3 nM". Symbol units are matched **case-sensitively** because `nm`
    is nanometres and `nM` is nanomolar.
 
-The Foundry live path is coded against the documented public API but has not
-been exercised against a real account — no token. That is a gap, stated
-plainly rather than papered over.
+**The Foundry live path has not been exercised against a real account** — no
+token. The typed models, though, are no longer taken on trust: a real
+captured response ships at `tests/data/foundry_experiment_response.json`, and
+it **did not parse**. The live API returns `id` and `code` where the fixtures
+say `experiment_id` and `experiment_code`, and nests costs under
+`costs.breakdown` where the fixtures are flat. A typed client that only
+parses its own fixtures is a typed client for the fixtures, so the models now
+accept both shapes and a test pins it.
+
+Transport, auth and pagination against the real service remain untested.
+That's the gap, stated plainly rather than papered over.
 
 ---
 

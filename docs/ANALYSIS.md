@@ -2,7 +2,7 @@
 
 **Project:** `literature-grounding` / `target-intel`
 **Repo:** [`AMVamsi/adaptyv-target-intel`](https://github.com/AMVamsi/adaptyv-target-intel) · [README](../README.md)
-**Status:** 159 tests passing on both mcp 1.x and 2.x · **runs on real PubMed literature by default** (77 papers, real PMIDs) · extraction quality measured against a hand-labeled gold set · health-checked container + Neo4j loader.
+**Status:** 164 tests passing on both mcp 1.x and 2.x · **runs on real PubMed literature by default** (77 papers, real PMIDs) · extraction quality measured against a hand-labeled gold set · health-checked container + Neo4j loader.
 
 ---
 
@@ -123,7 +123,7 @@ listing because finding them is the substance of the work:
 | **No README.** The project had no front door at all. | Medium | Written, leading with the concrete EGFR failure case. |
 | **No plugin scaffolding.** | Medium | `.claude-plugin/plugin.json`, `marketplace.json`, `.mcp.json`, validated against the official schema. |
 
-**Test count: 52/53 → 159/159**, with the new tests concentrated exactly
+**Test count: 52/53 → 164/164**, with the new tests concentrated exactly
 where the bugs were: `test_mcp_protocol.py` (7), `test_pubmed_live_path.py`
 (10), `test_ner_real_notation.py` (9), `test_calibration_status.py` (7),
 `test_scorer.py` (14), `test_neo4j_loader.py` (9), `test_health.py` (7).
@@ -300,7 +300,7 @@ these is worth less than one that doesn't:
 
 ```bash
 git clone https://github.com/AMVamsi/adaptyv-target-intel && cd adaptyv-target-intel
-pip install -e ".[dev]" && pytest          # 159 passed, offline, ~10s
+pip install -e ".[dev]" && pytest          # 164 passed, offline, ~10s
 ruff check src tests scripts evals                             # clean
 
 target-intel interpret 019d4a2b-3c5e-7890-a001-000000000001    # HER2: 1 of 4 flagged, real PMIDs
